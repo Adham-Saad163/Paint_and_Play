@@ -40,12 +40,12 @@ bool Poly::insideShape(int x, int y)
 
 void Poly::Save(ofstream& outfile, int id)
 {
-	outfile << "Poly" << "," << id << "," << numVertices << "," << point1.x << "," << point1.y << "," << center.x << "," << center.y << ",";
-	outfile << (int)GetGfxinfo().DrawClr.ucRed << "," << (int)GetGfxinfo().DrawClr.ucGreen << "," << (int)GetGfxinfo().DrawClr.ucBlue << ",";
+	outfile << "Poly" << " " << id << " " << numVertices << " " << point1.x << " " << point1.y << " " << center.x << " " << center.y << " ";
+	outfile << (int)ShpGfxInfo.DrawClr.ucRed << " " << (int)ShpGfxInfo.DrawClr.ucGreen << " " << (int)ShpGfxInfo.DrawClr.ucBlue << " ";
 
 	if (GetGfxinfo().isFilled)
 	{
-		outfile << (int)GetGfxinfo().FillClr.ucRed << "," << (int)GetGfxinfo().FillClr.ucGreen << "," << (int)GetGfxinfo().FillClr.ucBlue << endl;
+		outfile << (int)ShpGfxInfo.FillClr.ucRed << " " << (int)ShpGfxInfo.FillClr.ucGreen << " " << (int)ShpGfxInfo.FillClr.ucBlue << endl;
 	}
 	else
 	{

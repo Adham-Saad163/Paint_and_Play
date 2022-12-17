@@ -97,8 +97,8 @@ void Graph::SaveShapes(ofstream& outfile, GUI* pUI) {
 
 	color CrDrwC = pUI->getCrntDrawColor();
 	color CrFillC = pUI->getCrntFillColor();
-	outfile << (int)CrDrwC.ucRed << "," << (int)CrDrwC.ucGreen << "," << (int)CrDrwC.ucBlue << ",";
-	outfile << (int)CrFillC.ucRed << "," << (int)CrFillC.ucGreen << "," << (int)CrFillC.ucBlue << ",";
+	outfile << (int)CrDrwC.ucRed << " " << (int)CrDrwC.ucGreen << " " << (int)CrDrwC.ucBlue << " ";
+	outfile << (int)CrFillC.ucRed << " " << (int)CrFillC.ucGreen << " " << (int)CrFillC.ucBlue << " ";
 	outfile << pUI->getCrntPenWidth() << endl;
 	int numShapes = shapesList.size();
 	outfile << numShapes << endl;

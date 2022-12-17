@@ -32,12 +32,12 @@ void Circle::Draw(GUI* pUI) const
 
 void Circle::Save(ofstream& outfile, int id)
 {
-	outfile << "Circle" << "," << id << "," << Center.x << "," << Center.y << "," << Radius.x << "," << Radius.y << ",";
-	outfile << (int)GetGfxinfo().DrawClr.ucRed << "," << (int)GetGfxinfo().DrawClr.ucGreen << "," << (int)GetGfxinfo().DrawClr.ucBlue << ",";
+	outfile << "Circle" << " " << id << " " << Center.x << " " << Center.y << " " << Radius.x << " " << Radius.y << " ";
+	outfile << (int)ShpGfxInfo.DrawClr.ucRed << " " << (int)ShpGfxInfo.DrawClr.ucGreen << " " << (int)ShpGfxInfo.DrawClr.ucBlue << " ";
 
 	if (GetGfxinfo().isFilled)
 	{
-		outfile << (int)GetGfxinfo().FillClr.ucRed << "," << (int)GetGfxinfo().FillClr.ucGreen << "," << (int)GetGfxinfo().FillClr.ucBlue << endl;
+		outfile << (int)ShpGfxInfo.FillClr.ucRed << " " << (int)ShpGfxInfo.FillClr.ucGreen << " " << (int)ShpGfxInfo.FillClr.ucBlue << endl;
 	}
 	else
 	{

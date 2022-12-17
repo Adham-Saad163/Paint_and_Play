@@ -13,6 +13,6 @@ public:
 	SImage(Point p, int w,int h, GfxInfo shapeGfxInfo);
 	virtual ~SImage();
 	virtual void Draw(GUI* pUI) const;
-	virtual void Save(ofstream& outfile);
+	virtual void Save(ofstream& outfile, int id);
 };
 

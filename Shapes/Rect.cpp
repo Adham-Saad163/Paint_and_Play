@@ -23,12 +23,12 @@ bool Rect::insideShape(int x, int y)
 
 void Rect::Save(ofstream& outfile, int id)
 {
-	outfile << "RECT" << "," << id << "," << Corner1.x << "," << Corner1.y << "," << Corner2.x << "," << Corner2.y << ",";
-	outfile << (int)GetGfxinfo().DrawClr.ucRed << "," << (int)GetGfxinfo().DrawClr.ucGreen << "," << (int)GetGfxinfo().DrawClr.ucBlue << ",";
+	outfile << "RECT" << " " << id << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	outfile << (int)ShpGfxInfo.DrawClr.ucRed << " " << (int)ShpGfxInfo.DrawClr.ucGreen << " " << (int)ShpGfxInfo.DrawClr.ucBlue << " ";
 
 	if (GetGfxinfo().isFilled)
 	{
-		outfile << (int)GetGfxinfo().FillClr.ucRed << "," << (int)GetGfxinfo().FillClr.ucGreen << "," << (int)GetGfxinfo().FillClr.ucBlue << endl;
+		outfile << (int)ShpGfxInfo.FillClr.ucRed << " " << (int)ShpGfxInfo.FillClr.ucGreen << " " << (int)ShpGfxInfo.FillClr.ucBlue << endl;
 	}
 	else
 	{

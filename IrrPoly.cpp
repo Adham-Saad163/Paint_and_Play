@@ -31,18 +31,18 @@ bool IrrPoly::insideShape(int x, int y)
 
 void IrrPoly::Save(ofstream& outfile, int id)
 {
-	outfile << "IrrPoly" << "," << id << "," << numVertices << ",";
+	outfile << "IrrPoly" << " " << id << " " << numVertices << " ";
 	for (int i = 0;i < numVertices;i++)
 	{
-		outfile << Arr[i].x << ",";
-		outfile << Arr[i].y << ",";
+		outfile << Arr[i].x << " ";
+		outfile << Arr[i].y << " ";
 	}
 
-	outfile << (int)GetGfxinfo().DrawClr.ucRed << "," << (int)GetGfxinfo().DrawClr.ucGreen << "," << (int)GetGfxinfo().DrawClr.ucBlue << ",";
+	outfile << (int)ShpGfxInfo.DrawClr.ucRed << " " << (int)ShpGfxInfo.DrawClr.ucGreen << " " << (int)ShpGfxInfo.DrawClr.ucBlue << " ";
 
 	if (GetGfxinfo().isFilled)
 	{
-		outfile << (int)GetGfxinfo().FillClr.ucRed << "," << (int)GetGfxinfo().FillClr.ucGreen << "," << (int)GetGfxinfo().FillClr.ucBlue << endl;
+		outfile << (int)ShpGfxInfo.FillClr.ucRed << " " << (int)ShpGfxInfo.FillClr.ucGreen << " " << (int)ShpGfxInfo.FillClr.ucBlue << endl;
 	}
 	else
 	{
