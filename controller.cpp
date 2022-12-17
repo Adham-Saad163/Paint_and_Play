@@ -15,6 +15,7 @@
 #include "opStick.h"
 #include "opDelete.h"
 #include "opSave.h"
+#include"opLoad.h"
 
 
 //Constructor
@@ -115,6 +116,10 @@ operation* controller::createOperation(operationType OpType)
 		case SAVE:
 			pOp = new opSave(this);
 			break;
+		case LOAD:
+			pOp = new opLoad(this);
+			break;
+
 
 		case EXIT:
 			///create Exitoperation here

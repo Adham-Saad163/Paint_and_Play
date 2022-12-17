@@ -3,6 +3,7 @@
 #include "DEFS.h"
 #include "Shapes\Graph.h"
 #include "GUI\GUI.h"
+#include"opLoad.h"
 
 class operation; //forward declaration
 

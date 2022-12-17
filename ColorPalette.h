@@ -9,4 +9,6 @@ public:
 	virtual ~ColorPalette();
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& outfile, int id);
+	virtual bool insideShape(int x, int y) ;
+
 };

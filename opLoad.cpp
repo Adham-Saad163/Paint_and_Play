@@ -16,6 +16,6 @@ void opLoad::Execute()
 	string fileName = pUI->GetSrting();
 	ifstream inFile;
 	inFile.open(fileName + ".txt");
-	//pGraph->load(inFile, pUI);
+	pGraph->load(inFile, pUI);
 
 }
