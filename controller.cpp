@@ -16,6 +16,7 @@
 #include "opDelete.h"
 #include "opSave.h"
 #include"opLoad.h"
+#include"opExit.h"
 
 
 //Constructor
@@ -123,6 +124,7 @@ operation* controller::createOperation(operationType OpType)
 
 		case EXIT:
 			///create Exitoperation here
+			pOp = new opExit(this);
 			
 			break;
 		
