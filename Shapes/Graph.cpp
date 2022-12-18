@@ -131,7 +131,8 @@ void Graph::load(ifstream& inputfile, GUI* pUI)
 {
 
 
-	pUI->ClearDrawArea();    //Clear current graph
+	pUI->ClearDrawArea(); //Clear current graph
+	shapesList.clear();
 
 	if (inputfile.fail())       //Check if the FileName is a valid name
 	{
