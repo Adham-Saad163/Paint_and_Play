@@ -195,6 +195,7 @@
     <ClCompile Include="opExit.cpp">
       <Filter>Operations</Filter>
     </ClCompile>
+    <ClCompile Include="opRotate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -350,6 +351,7 @@
     <ClInclude Include="opExit.h">
       <Filter>Operations</Filter>
     </ClInclude>
+    <ClInclude Include="opRotate.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">

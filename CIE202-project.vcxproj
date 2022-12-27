@@ -184,6 +184,7 @@
     <ClCompile Include="opExit.cpp" />
     <ClCompile Include="opLoad.cpp" />
     <ClCompile Include="oppAddTriangle.cpp" />
+    <ClCompile Include="opRotate.cpp" />
     <ClCompile Include="opSave.cpp" />
     <ClCompile Include="opSelect.cpp" />
     <ClCompile Include="opStick.cpp" />
@@ -238,6 +239,7 @@
     <ClInclude Include="opExit.h" />
     <ClInclude Include="opLoad.h" />
     <ClInclude Include="oppAddTriangle.h" />
+    <ClInclude Include="opRotate.h" />
     <ClInclude Include="opSave.h" />
     <ClInclude Include="opSelect.h" />
     <ClInclude Include="opStick.h" />
