@@ -183,9 +183,12 @@
     <ClCompile Include="operations\opAddRect.cpp" />
     <ClCompile Include="opExit.cpp" />
     <ClCompile Include="opLoad.cpp" />
+    <ClCompile Include="opMove.cpp" />
     <ClCompile Include="oppAddTriangle.cpp" />
+    <ClCompile Include="opResize.cpp" />
     <ClCompile Include="opRotate.cpp" />
     <ClCompile Include="opSave.cpp" />
+    <ClCompile Include="opScrample.cpp" />
     <ClCompile Include="opSelect.cpp" />
     <ClCompile Include="opStick.cpp" />
     <ClCompile Include="Poly.cpp" />
@@ -238,9 +241,12 @@
     <ClInclude Include="operations\operation.h" />
     <ClInclude Include="opExit.h" />
     <ClInclude Include="opLoad.h" />
+    <ClInclude Include="opMove.h" />
     <ClInclude Include="oppAddTriangle.h" />
+    <ClInclude Include="opResize.h" />
     <ClInclude Include="opRotate.h" />
     <ClInclude Include="opSave.h" />
+    <ClInclude Include="opScrample.h" />
     <ClInclude Include="opSelect.h" />
     <ClInclude Include="opStick.h" />
     <ClInclude Include="Poly.h" />

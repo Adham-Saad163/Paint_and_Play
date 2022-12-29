@@ -12,5 +12,9 @@ public:
 	virtual void Draw(GUI* pUI) const;
 	virtual bool  insideShape(int x, int y);
 	virtual void Save(ofstream& outfile, int id);
+	virtual void Rotate();
+	virtual void Resize(double size);
+	virtual void Move(Point P);
+
 };
 

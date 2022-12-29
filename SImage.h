@@ -1,7 +1,6 @@
 #pragma once
-#include "Shapes/Shape.h"
-
-class SImage : public shape
+#include"GUI/GUI.h"
+class SImage 
 {
 private:
 	string Image;
@@ -9,10 +8,13 @@ private:
 	int width;
 	int height;
 public:
-	virtual bool  insideShape(int x, int y);
-	SImage(Point p, int w,int h, GfxInfo shapeGfxInfo);
+	 bool  insideShape(int x, int y);
+	SImage(Point p, int w,int h);
 	virtual ~SImage();
-	virtual void Draw(GUI* pUI) const;
-	virtual void Save(ofstream& outfile, int id);
+	 void Draw(GUI* pUI) const;
+	//virtual void Save(ofstream& outfile, int id);
+	//virtual void Rotate();
+	//virtual void Resize(double size);
+	//virtual void Move();
 };
 

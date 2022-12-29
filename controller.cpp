@@ -6,7 +6,6 @@
 #include "opAddDrawMode.h"
 #include "opAddColorPalette.h"
 #include "opChangeFill.h"
-
 #include "oppAddTriangle.h"
 #include "opAddLine.h"
 #include "opAddCircle.h"
@@ -17,8 +16,10 @@
 #include "opSave.h"
 #include"opLoad.h"
 #include"opExit.h"
-
-
+#include"opRotate.h"
+#include"opResize.h"
+#include "opMove.h"
+#include "opScrample.h"
 //Constructor
 controller::controller()
 {
@@ -120,8 +121,19 @@ operation* controller::createOperation(operationType OpType)
 		case LOAD:
 			pOp = new opLoad(this);
 			break;
+		case ROTATE:
+			pOp = new opRotate(this);
+			break;
 
-
+		case RESIZE:
+			pOp = new opResize(this);
+			break;
+		case MOVE:
+			pOp = new opMove(this);
+			break;
+		case SCRAMBLE:
+			pOp = new opScrample(this);
+			break;
 		case EXIT:
 			///create Exitoperation here
 			pOp = new opExit(this);

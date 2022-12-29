@@ -29,6 +29,12 @@ void Graph::Addshape(shape* pShp)
 {
 	//Add a new shape to the shapes vector
 	shapesList.push_back(pShp);	
+
+}
+void Graph::AddImage(SImage* pShp)
+{
+	//Add a new shape to the shapes vector
+	ImagesList.push_back(pShp);
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //Draw all shapes on the user interface
@@ -37,6 +43,9 @@ void Graph::Draw(GUI* pUI) const
 	pUI->ClearDrawArea();
 	for (auto shapePointer : shapesList)
 		shapePointer->Draw(pUI);
+
+	for (auto imagePointer : ImagesList)
+		imagePointer->Draw(pUI);
 }
 
 
@@ -62,7 +71,10 @@ shape* Graph::Getshape(int x, int y) const{
 	}
 return nullptr;
 }
-
+void Graph::Scrample()
+{
+	
+}
 void Graph::setFilled(bool ans)
 {
 	isFilled = ans;
@@ -405,3 +417,4 @@ void Graph::load(ifstream& inputfile, GUI* pUI)
 	pUI->ClearStatusBar();
 	pUI->CreateStatusBar();
 }
+

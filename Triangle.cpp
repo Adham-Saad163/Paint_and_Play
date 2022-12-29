@@ -50,3 +50,56 @@ void Triangle::Save(ofstream& outfile, int id)
 		outfile << "NO_FILL" << endl;
 	}
 }
+void Triangle::Rotate()
+{
+	double CenterX = (Corner1.x + Corner2.x + Corner3.x) / 3;
+	double CenterY = (Corner1.y + Corner2.y + Corner3.y) / 3;
+	int Temp1x = Corner1.x;
+	int Temp1y = Corner1.y;
+	int Temp2x = Corner2.x;
+	int Temp2y = Corner2.y;
+	int Temp3x = Corner3.x;
+	int Temp3y = Corner3.y;
+	Corner1.x = -Temp1y + CenterX + CenterY;
+	Corner1.y = Temp1x - CenterX + CenterY;
+	Corner2.x = -Temp2y + CenterX + CenterY;
+	Corner2.y = Temp2x - CenterX + CenterY;
+	Corner3.x = -Temp3y + CenterX + CenterY;
+	Corner3.y = Temp3x - CenterX + CenterY;
+}
+void Triangle::Resize(double size)
+{
+	double CenterX = (Corner1.x + Corner2.x + Corner3.x) / 3;
+	double CenterY = (Corner1.y + Corner2.y + Corner3.y) / 3;
+	int Temp1x = Corner1.x;
+	int Temp1y = Corner1.y;
+	int Temp2x = Corner2.x;
+	int Temp2y = Corner2.y;
+	int Temp3x = Corner3.x;
+	int Temp3y = Corner3.y;
+	Corner1.x = size * Temp1x - size * CenterX + CenterX;
+	Corner1.y = size * Temp1y - size * CenterY + CenterY;
+	Corner2.x = size * Temp2x - size * CenterX + CenterX;
+	Corner2.y = size * Temp2y - size * CenterY + CenterY;
+	Corner3.x = size * Temp3x - size * CenterX + CenterX;
+	Corner3.y = size * Temp3y - size * CenterY + CenterY;
+}
+void Triangle::Move(Point P)
+{
+	double CenterX = (Corner1.x + Corner2.x + Corner3.x) / 3;
+	double CenterY = (Corner1.y + Corner2.y + Corner3.y) / 3;
+	double dx = P.x- CenterX ;
+	double dy =  P.y-CenterY;
+	int Temp1x = Corner1.x;
+	int Temp1y = Corner1.y;
+	int Temp2x = Corner2.x;
+	int Temp2y = Corner2.y;
+	int Temp3x = Corner3.x;
+	int Temp3y = Corner3.y;
+	Corner1.x = Temp1x + dx;
+	Corner1.y = Temp1y + dy;
+	Corner2.x = Temp2x + dx;
+	Corner2.y = Temp2y +dy;
+	Corner3.x = Temp3x + dx;
+	Corner3.y = Temp3y +dy;
+}

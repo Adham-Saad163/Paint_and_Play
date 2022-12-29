@@ -49,3 +49,15 @@ void IrrPoly::Save(ofstream& outfile, int id)
 		outfile << "NO_FILL" << endl;
 	}
 }
+void IrrPoly::Rotate()
+{
+
+}
+void IrrPoly::Resize(double size)
+{
+
+}
+void IrrPoly::Move(Point P)
+{
+
+}

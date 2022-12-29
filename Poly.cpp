@@ -52,3 +52,15 @@ void Poly::Save(ofstream& outfile, int id)
 		outfile << "NO_FILL" << endl;
 	}
 }
+void Poly::Rotate()
+{
+
+}
+void Poly::Resize(double size)
+{
+
+}
+void Poly::Move(Point P)
+{
+
+}

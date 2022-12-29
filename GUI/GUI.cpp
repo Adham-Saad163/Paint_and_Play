@@ -13,7 +13,7 @@ GUI::GUI()
 
 	StatusBarHeight = 50;
 	ToolBarHeight = 50;
-	MenuIconWidth = 80;
+	MenuIconWidth = 60;
 
 	DrawColor = BLUE;	//default Drawing color
 	FillColor = GREEN;	//default Filling color
@@ -102,9 +102,10 @@ operationType GUI::GetUseroperation() const
 			case ICON_DELETE: return DEL;
 			case ICON_SAVE: return SAVE;
 			case ICON_LOAD: return LOAD;
-
-
-
+			case ICON_ROTATE: return ROTATE;
+			case ICON_RESIZE: return RESIZE;
+			case ICON_MOVE: return MOVE;
+			case ICON_SCRAMBLE: return SCRAMBLE;
 			case ICON_EXIT: return EXIT;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
@@ -221,6 +222,10 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_DELETE] = "images\\MenuIcons\\Menu_Delete.jpg";
 	MenuIconImages[ICON_SAVE] = "images\\MenuIcons\\Menu_Save.jpg";
 	MenuIconImages[ICON_LOAD] = "images\\MenuIcons\\Menu_Load.jpg";
+	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Menu_Rotate.jpg";
+	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Menu_Resize.jpg";
+	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Menu_Move.jpg";
+	MenuIconImages[ICON_SCRAMBLE] = "images\\MenuIcons\\Menu_Scrample.jpg";
 	MenuIconImages[ICON_EXIT] = "images\\MenuIcons\\Menu_Exit.jpg";
 
 	//TODO: Prepare images for each menu icon and add it to the list
@@ -377,7 +382,7 @@ void GUI::DrawLi(Point P1, Point P2, GfxInfo LiGfxInfo) const
 
 }
 
-void GUI::DrawCircle(Point P1, Point P2, GfxInfo RectGfxInfo) const
+void GUI::DrawCircle(Point P1, double Radius, GfxInfo RectGfxInfo) const
 {
 	color DrawingClr;
 	if (RectGfxInfo.isSelected)	//shape is selected
@@ -395,8 +400,8 @@ void GUI::DrawCircle(Point P1, Point P2, GfxInfo RectGfxInfo) const
 	}
 	else
 		style = FRAME;
-	double radius = sqrt(pow(P2.x - P1.x, 2) + pow(P2.y - P1.y, 2));
-	pWind->DrawCircle(P1.x, P1.y, radius, style);
+	
+	pWind->DrawCircle(P1.x, P1.y, Radius, style);
 
 }
 

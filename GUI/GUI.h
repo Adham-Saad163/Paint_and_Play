@@ -49,8 +49,10 @@ class GUI
 		ICON_SAVE,
 		ICON_LOAD,
 		ICON_PLAY,
-
-
+		ICON_ROTATE,
+		ICON_RESIZE,
+		ICON_MOVE,
+		ICON_SCRAMBLE,
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
@@ -127,7 +129,7 @@ public:
 	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo) const;  //Draw a rectangle
 	void DrawTrian(Point P1, Point P2, Point P3, GfxInfo TrianGfxInfo)const;
 	void DrawLi(Point P1, Point P2, GfxInfo LineGfxInfo) const;
-	void DrawCircle(Point P1, Point P2, GfxInfo LineGfxInfo) const;
+	void DrawCircle(Point P1, double radius, GfxInfo LineGfxInfo) const;
 	void DrawSq(Point P1, Point P2, GfxInfo RectGfxInfo) const;
 	void DrawPoly(int* xArr,int* yArr, int numVertices, GfxInfo PolyGfxInfo) const;  //Draw Polygon
 	void StickImage(string image, int x1, int y1, int x2, int y2);

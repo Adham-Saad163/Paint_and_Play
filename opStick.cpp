@@ -29,7 +29,9 @@ void opStick::Execute()
 
 	if (ShapePointer != NULL)
 	{
-		SImage* SI = new SImage(P1, 200, 200, SImageGfxInfo);
-		pGr->Addshape(SI);
+		SImage* SI = new SImage(P1, 200, 200);
+		pGr->AddImage(SI);
+		
+	
 	}
 }
