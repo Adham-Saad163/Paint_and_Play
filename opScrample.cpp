@@ -11,8 +11,9 @@ opScrample::~opScrample()
 
 void opScrample::Execute()
 {
-	
 	GUI* pUI = pControl->GetUI();
-	pUI->PrintMessage("Choose a shape to resize ");
-	
+	Graph* pGr = pControl->getGraph();
+	pGr->Scrample();
+	pUI->PrintMessage("Shapes are Scrambled");
+	pUI->ClearStatusBar();
 }

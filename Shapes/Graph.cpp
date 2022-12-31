@@ -49,7 +49,6 @@ void Graph::Draw(GUI* pUI) const
 }
 
 
-
 bool outSide_shape = true;
 
 
@@ -71,9 +70,38 @@ shape* Graph::Getshape(int x, int y) const{
 	}
 return nullptr;
 }
-void Graph::Scrample()
+shape* Graph::getSelectedShape()
 {
 	
+
+	for (auto shapePointer : shapesList)
+	{
+		if (shapePointer->IsSelected())
+		{
+			selectedShape = shapePointer;
+		}
+	}
+	if (selectedShape != NULL)
+	{
+		Selectd += 1;
+		return selectedShape;
+	}
+	else
+	{
+
+		return nullptr;
+	}
+}
+
+
+void Graph::Scrample()
+{
+	srand(time(0));
+	for (int i = 0; i < shapesList.size(); i++)
+	{
+		shapesList[i]->Scrample();
+
+	}
 }
 void Graph::setFilled(bool ans)
 {

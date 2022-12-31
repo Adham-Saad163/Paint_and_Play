@@ -61,3 +61,7 @@ void IrrPoly::Move(Point P)
 {
 
 }
+void IrrPoly::Scrample()
+{
+
+}

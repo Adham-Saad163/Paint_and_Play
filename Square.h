@@ -18,6 +18,7 @@ public:
 	virtual void Rotate();
 	virtual void Resize(double size);
 	virtual void Move(Point P);
+	virtual void Scrample();
 	
 };
 

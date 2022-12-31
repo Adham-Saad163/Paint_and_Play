@@ -64,3 +64,7 @@ void Poly::Move(Point P)
 {
 
 }
+void Poly::Scrample()
+{
+
+}

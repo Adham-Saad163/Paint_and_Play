@@ -103,3 +103,25 @@ void Triangle::Move(Point P)
 	Corner3.x = Temp3x + dx;
 	Corner3.y = Temp3y +dy;
 }
+void Triangle::Scrample()
+{
+	
+	int temp1 = (rand() % 1000);
+	int temp2 = (rand() % 500);
+	double CenterX = (Corner1.x + Corner2.x + Corner3.x) / 3;
+	double CenterY = (Corner1.y + Corner2.y + Corner3.y) / 3;
+	double dx = temp1 - CenterX;
+	double dy = temp2 - CenterY;
+	int Temp1x = Corner1.x;
+	int Temp1y = Corner1.y;
+	int Temp2x = Corner2.x;
+	int Temp2y = Corner2.y;
+	int Temp3x = Corner3.x;
+	int Temp3y = Corner3.y;
+	Corner1.x = Temp1x + dx;
+	Corner1.y = Temp1y + dy;
+	Corner2.x = Temp2x + dx;
+	Corner2.y = Temp2y + dy;
+	Corner3.x = Temp3x + dx;
+	Corner3.y = Temp3y + dy;
+}
