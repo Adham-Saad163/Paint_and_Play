@@ -33,7 +33,7 @@ void Graph::Addshape(shape* pShp)
 }
 void Graph::AddImage(SImage* pShp)
 {
-	//Add a new shape to the shapes vector
+	
 	ImagesList.push_back(pShp);
 }
 ////////////////////////////////////////////////////////////////////////////////////
@@ -70,10 +70,9 @@ shape* Graph::Getshape(int x, int y) const{
 	}
 return nullptr;
 }
-shape* Graph::getSelectedShape()
+shape* Graph::getMovableShape()
 {
 	
-
 	for (auto shapePointer : shapesList)
 	{
 		if (shapePointer->IsSelected())
@@ -81,9 +80,9 @@ shape* Graph::getSelectedShape()
 			selectedShape = shapePointer;
 		}
 	}
-	if (selectedShape != NULL)
+	if (selectedShape != nullptr)
 	{
-		Selectd += 1;
+		MoveShape = true;
 		return selectedShape;
 	}
 	else

@@ -27,13 +27,13 @@ private:
 	PickedColor pickedClr;
 public:										
 	bool isFilled = false;
-	int Selectd = 0;
+	bool MoveShape = false;
 	Graph();
 	~Graph();
 	void Addshape(shape* pFig); //Adds a new shape to the shapesList
 	void Draw(GUI* pUI) const;			//Draw the graph (draw all shapes)s
 	shape* Getshape(int x, int y) const; //Search for a shape given a point inside the shape
-	shape* getSelectedShape();
+	shape* getMovableShape();
 	void SaveShapes(ofstream& outfile, GUI* pUI);	//Save all shapes to a file
 	void load(ifstream& inputfile, GUI* pUI);	//Load all shapes from a file
 	void AddImage(SImage* pFig); //Adds a new shape to the shapesList
