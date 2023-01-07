@@ -22,4 +22,23 @@ bool ColorPalette::insideShape(int x, int y)
 ColorPalette::ColorPalette(GfxInfo shapeGfxInfo) :shape(shapeGfxInfo) 
 {}
 
+void ColorPalette::Rotate()
+{
 
+}
+void ColorPalette::Resize(double size)
+{
+
+}
+void ColorPalette::Move(Point P)
+{
+
+}
+void ColorPalette::Scrample()
+{
+
+}
+void ColorPalette::SImage(GUI* pUI)
+{
+
+}
