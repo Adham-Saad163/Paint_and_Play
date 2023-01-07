@@ -65,3 +65,7 @@ void IrrPoly::Scrample()
 {
 
 }
+void IrrPoly::SImage(GUI* pUI)
+{
+	
+}

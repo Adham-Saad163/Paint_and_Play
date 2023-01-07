@@ -30,14 +30,7 @@ void opMove::Execute()
 
             }
 
-        }
-
-
-
-    
-            
-         
-      
+        }  
 }
 
 

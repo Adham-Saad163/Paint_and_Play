@@ -5,6 +5,7 @@ class Line : public shape
 private:
 	Point Corner1;
 	Point Corner2;
+	
 public:
 	virtual bool  insideShape(int x, int y);
 	Line(Point Corner1, Point Corner2, GfxInfo shapeGfxInfo);
@@ -15,6 +16,7 @@ public:
 	virtual void Resize(double size);
 	virtual void Move(Point P);
 	virtual void Scrample();
+	virtual void  SImage(GUI* pUI);
 };
 
 

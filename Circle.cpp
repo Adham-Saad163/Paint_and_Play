@@ -70,3 +70,7 @@ void Circle::Scrample()
 	Point1.x = temp1;
 	Point1.y = temp2;
 }
+void Circle::SImage(GUI* pUI)
+{
+	pUI->StickImage(Image, Point1.x, Point1.y, 200, 200);
+}

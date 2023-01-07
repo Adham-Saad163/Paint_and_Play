@@ -68,3 +68,7 @@ void Poly::Scrample()
 {
 
 }
+void Poly::SImage(GUI* pUI)
+{
+	
+}

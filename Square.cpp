@@ -131,3 +131,7 @@ void Square::Scrample()
 	Corner2.y = Temp2y + dy;
 	
 }
+void Square::SImage(GUI* pUI)
+{
+	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
+}

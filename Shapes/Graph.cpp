@@ -42,16 +42,27 @@ void Graph::Draw(GUI* pUI) const
 {
 	pUI->ClearDrawArea();
 	for (auto shapePointer : shapesList)
+	{
 		shapePointer->Draw(pUI);
+		if (shapePointer->IsSticked)
+		{
+			shapePointer->SImage(pUI);
+		}
+	}
+		
 
-	for (auto imagePointer : ImagesList)
-		imagePointer->Draw(pUI);
+	//for (auto imagePointer : ImagesList)
+		//imagePointer->Draw(pUI);
 }
 
 
 bool outSide_shape = true;
 
+bool Graph::isSelected(bool B)
+{
+	return B;
 
+}
 
 shape* Graph::Getshape(int x, int y) const{
 	for (auto shapePointer : shapesList) {
@@ -70,7 +81,7 @@ shape* Graph::Getshape(int x, int y) const{
 	}
 return nullptr;
 }
-shape* Graph::getMovableShape()
+shape* Graph::getSelectedShape()
 {
 	
 	for (auto shapePointer : shapesList)
@@ -82,7 +93,6 @@ shape* Graph::getMovableShape()
 	}
 	if (selectedShape != nullptr)
 	{
-		MoveShape = true;
 		return selectedShape;
 	}
 	else
