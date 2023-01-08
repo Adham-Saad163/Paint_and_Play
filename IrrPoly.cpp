@@ -78,7 +78,7 @@ void IrrPoly::zoom(double scale, int x, int y)
 		Arr[i].y = (Arr[i].y * scale) - (scale * y) + y;
 	}
 }
-}
+
 
 shape* IrrPoly::clone()
 {
