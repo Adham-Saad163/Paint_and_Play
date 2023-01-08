@@ -26,5 +26,6 @@ public:
 	int* getshapeparamters();
 	virtual shape* clone();
 	virtual Point getUpper();
+	//virtual void Load(ifstream& Infile);
 };
 

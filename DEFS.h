@@ -34,6 +34,11 @@ enum operationType //The operations supported (you can add more if needed)
 	ZOOMIN,
 	ZOOMOUT,
 
+	COPY,
+	CUT,
+	PASTE,
+	DUBLICATE,
+
 	EXIT,			//Exit the application
 	SCRAMBLE,		//Scramble shapes 
 	DRAWING_AREA,	//A click on the drawing area

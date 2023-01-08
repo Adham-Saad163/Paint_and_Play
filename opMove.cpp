@@ -13,6 +13,7 @@ void opMove::Execute()
     
     Point P;
     GUI* pUI = pControl->GetUI();
+    
     Graph* pGr = pControl->getGraph();
     window* pWind = pUI->DetectMouse();
 

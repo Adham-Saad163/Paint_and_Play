@@ -30,6 +30,8 @@ public:
 
 	virtual shape* clone();
 	virtual Point getUpper();
+	//virtual void Load(ifstream& Infile);
+
 };
 
 

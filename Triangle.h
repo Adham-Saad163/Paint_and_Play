@@ -23,6 +23,7 @@ public:
 	virtual void  SImage(GUI* pUI) ;
 	virtual shape* clone();
 	virtual Point getUpper();
+	//virtual void Load(ifstream& Infile);
 
 	void zoom(double scale, int x, int y) override;
 };

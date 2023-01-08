@@ -24,6 +24,7 @@ public:
 
 	virtual shape* clone();
 	virtual Point getUpper();
+	
 };
 
 

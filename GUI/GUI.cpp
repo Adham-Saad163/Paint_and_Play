@@ -13,7 +13,7 @@ GUI::GUI()
 
 	StatusBarHeight = 50;
 	ToolBarHeight = 50;
-	MenuIconWidth = 50;
+	MenuIconWidth = 40;
 
 	DrawColor = BLUE;	//default Drawing color
 	FillColor = GREEN;	//default Filling color
@@ -124,6 +124,10 @@ operationType GUI::GetUseroperation() const
 			case ICON_SCRAMBLE: return SCRAMBLE;
 			case ICON_ZOOMIN: return ZOOMIN;
 			case ICON_ZOOMOUT: return ZOOMOUT;
+			case ICON_COPY: return COPY;
+			case ICON_PASTE: return PASTE;
+			case ICON_CUT: return CUT;
+			case ICON_DUBLICATE: return DUBLICATE;
 			case ICON_EXIT: return EXIT;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
@@ -251,6 +255,12 @@ void GUI::CreateDrawToolBar()
 
 	MenuIconImages[ICON_ZOOMIN] = "images\\MenuIcons\\Menu_Zoom_In.jpg";
 	MenuIconImages[ICON_ZOOMOUT] = "images\\MenuIcons\\Menu_Zoom_Out.jpg";
+
+	MenuIconImages[ICON_COPY] = "images\\MenuIcons\\Menu_Copy.jpg";
+	MenuIconImages[ICON_PASTE] = "images\\MenuIcons\\Menu_Paste.jpg";
+	MenuIconImages[ICON_CUT] = "images\\MenuIcons\\Menu_Cut.jpg";
+	MenuIconImages[ICON_DUBLICATE] = "images\\MenuIcons\\Menu_Dublicate.jpg";
+
 	MenuIconImages[ICON_EXIT] = "images\\MenuIcons\\Menu_Exit.jpg";
 
 	//TODO: Prepare images for each menu icon and add it to the list

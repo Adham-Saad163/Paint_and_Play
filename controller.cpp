@@ -177,13 +177,26 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opScrample(this);
 			break;
 
+		case COPY:
+			pOp = new opCopy(this);
+			break;
+		case PASTE:
+			pOp = new oppaste(this);
+			break;
+		case CUT:
+			pOp = new opCut(this);
+			break;
+		case DUBLICATE:
+			pOp = new opDuplicate(this);
+			break;
+
 		case EXIT:
 			pOp = new opExit(this);			
 			break;
 		
-		case PLAYING_AREA:
+	/*	case PLAYING_AREA:
 			pOp = new matchShapes(this);
-			break;
+			break;*/
 
 		case STATUS:	//a click on the status bar ==> no operation
 			break;

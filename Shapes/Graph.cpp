@@ -558,9 +558,10 @@ void Graph::PasteShape(Point p)
 				shapesList.push_back(newShape);
 
 			}
+			clearClipboard();
 		}
 		deselectAll();
-		clearClipboard();
+		
 	
 }
 

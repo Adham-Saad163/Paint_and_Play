@@ -60,6 +60,10 @@ class GUI
 		ICON_SCRAMBLE,
 		ICON_ZOOMIN,
 		ICON_ZOOMOUT,
+		ICON_COPY,
+		ICON_PASTE,
+		ICON_CUT,
+		ICON_DUBLICATE,
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
