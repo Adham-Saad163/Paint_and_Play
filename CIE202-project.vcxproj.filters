@@ -367,17 +367,12 @@
     <ClInclude Include="opResize.h">
       <Filter>Operations</Filter>
     </ClInclude>
-    <ClInclude Include="ColorPalette.h">
-      <Filter>Operations</Filter>
-    </ClInclude>
     <ClInclude Include="opMove.h">
       <Filter>Operations</Filter>
     </ClInclude>
     <ClInclude Include="opScrample.h">
       <Filter>Operations</Filter>
     </ClInclude>
-    <ClInclude Include="opUndo.h" />
-    <ClInclude Include="opRedo.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">
