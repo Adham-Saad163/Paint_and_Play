@@ -39,3 +39,6 @@ void  opSave::Execute()
 		pGUI->PrintMessage("Can not open the file!!");
 	}
 }
+
+void opSave::Undo() {}
+void opSave::Redo() {}

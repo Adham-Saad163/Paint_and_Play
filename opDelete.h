@@ -8,5 +8,8 @@ class opDelete: public operation
 public:
 	opDelete(controller* pCont);
 	virtual void Execute();
+
+	virtual void Undo() override;
+	virtual void Redo() override;
 };
 

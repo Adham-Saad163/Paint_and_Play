@@ -11,4 +11,9 @@ public:
 	virtual void Save(ofstream& outfile, int id);
 	virtual bool insideShape(int x, int y) ;
 
+
+	 void Rotate() override;	
+	 void Resize(double size) override;	
+	 void Move(Point P) override;		
+	 void Scrample() override;
 };

@@ -59,3 +59,6 @@ void opAddIrrPolygon::Execute()
 	pGr->Addshape(Irrpol);
 
 }
+
+void opAddIrrPolygon::Undo() {}
+void opAddIrrPolygon::Redo() {}

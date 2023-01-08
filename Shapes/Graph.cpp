@@ -9,6 +9,8 @@
 #include"../Square.h"
 #include"../Poly.h"
 #include"../IrrPoly.h"
+#include <iostream>
+
 
 
 Graph::Graph()
@@ -47,6 +49,33 @@ void Graph::Draw(GUI* pUI) const
 	for (auto imagePointer : ImagesList)
 		imagePointer->Draw(pUI);
 }
+
+
+
+
+void Graph::SendFromShapesListToUndo()
+{
+	if (shapesList[shapesList.size() - 1]) // Excutes if there are 1+
+	{
+		UndoneShapesList.push_back(shapesList[shapesList.size() - 1]);
+		shapesList.erase(shapesList.end() - 1);
+		cout << "Shape moved from shapes_list to Undone_shapes_list!";
+	}
+}
+
+void Graph::SendFromUndoToShapesList()
+{
+	if (UndoneShapesList[UndoneShapesList.size() - 1])
+	{
+		shapesList.push_back(UndoneShapesList[UndoneShapesList.size() - 1]);
+		UndoneShapesList.erase(UndoneShapesList.end() - 1);
+		cout << "Shape moved from Undone_shapes_list to shapes_list!";
+	}
+}
+
+
+
+
 
 
 bool outSide_shape = true;

@@ -50,3 +50,15 @@ void opAddSquare::Execute()
 	pGr->Addshape(S);
 
 }
+
+
+void opAddSquare::Undo()
+{
+	Graph* pGr = pControl->getGraph();
+	pGr->SendFromShapesListToUndo();
+}
+void opAddSquare::Redo()
+{
+	Graph* pGr = pControl->getGraph();
+	pGr->SendFromUndoToShapesList();
+}

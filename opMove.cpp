@@ -29,7 +29,16 @@ void opMove::Execute()
 
 
 
-    
+void opMove::Undo()
+{
+    Graph* pGr = pControl->getGraph();
+    pGr->SendFromShapesListToUndo();
+}
+void opMove::Redo()
+{
+    Graph* pGr = pControl->getGraph();
+    pGr->SendFromUndoToShapesList();
+}
 
 
 

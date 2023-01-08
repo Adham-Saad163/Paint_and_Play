@@ -13,3 +13,15 @@ void opDelete::Execute()
 	pUI->PrintMessage("The object is now removed");
 	pGraph->DeleteSelected();
 }
+
+
+void opDelete::Undo() 
+{
+	Graph* pGr = pControl->getGraph();
+	pGr->SendFromShapesListToUndo();
+}
+void opDelete::Redo() 
+{
+	Graph* pGr = pControl->getGraph();
+	pGr->SendFromUndoToShapesList();
+}

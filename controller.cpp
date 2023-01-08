@@ -20,6 +20,11 @@
 #include"opResize.h"
 #include "opMove.h"
 #include "opScrample.h"
+
+
+#include "opUndo.h"
+#include "opRedo.h"
+
 //Constructor
 controller::controller()
 {
@@ -44,33 +49,40 @@ operation* controller::createOperation(operationType OpType)
 	//According to operation Type, create the corresponding operation object
 	switch (OpType)
 	{
+
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
+			addNewOp(pOp);
 			break;
 
 
 		case DRAW_CIRC:
 			pOp = new opAddCircle(this);
+			addNewOp(pOp);
 			break;
 
 
 		case DRAW_LINE:
 			pOp = new opAddLine(this);
+			addNewOp(pOp);
 			break;
 
 
 		case DRAW_TRI:
 			pOp = new oppAddTriangle(this);
+			addNewOp(pOp);
 			break;
 
 
 		case DRAW_SQ:
 			pOp = new opAddSquare(this);
+			addNewOp(pOp);
 			break;
 
 
 		case DRAW_POLY:
 			pOp = new opAddPolygon(this);
+			addNewOp(pOp);
 			break;
 
 
@@ -111,33 +123,45 @@ operation* controller::createOperation(operationType OpType)
 
 		case DEL:
 			pOp = new opDelete(this);
+			addNewOp(pOp);
 			break;
-
-
 
 		case SAVE:
 			pOp = new opSave(this);
 			break;
+
 		case LOAD:
 			pOp = new opLoad(this);
 			break;
+
+		case UNDO:
+			pOp = new opUndo(this);
+			break;
+
+		case REDO:
+			pOp = new opRedo(this);
+			break;
+
 		case ROTATE:
 			pOp = new opRotate(this);
 			break;
 
 		case RESIZE:
 			pOp = new opResize(this);
+			addNewOp(pOp);
 			break;
+
 		case MOVE:
 			pOp = new opMove(this);
+			addNewOp(pOp);
 			break;
+
 		case SCRAMBLE:
 			pOp = new opScrample(this);
 			break;
+
 		case EXIT:
-			///create Exitoperation here
-			pOp = new opExit(this);
-			
+			pOp = new opExit(this);			
 			break;
 		
 		case STATUS:	//a click on the status bar ==> no operation
@@ -156,6 +180,7 @@ void controller::UpdateInterface() const
 {	
 	pGraph->Draw(pGUI);
 }
+
 ////////////////////////////////////////////////////////////////////////////////////
 //Return a pointer to the UI
 GUI *controller::GetUI() const
@@ -197,8 +222,8 @@ void controller::Run()
 		if (pOpr)
 		{
 			pOpr->Execute();//Execute
-			delete pOpr;	//operation is not needed any more ==> delete it
-			pOpr = nullptr;
+			//delete pOpr;	//operation is not needed any more ==> delete it
+			//pOpr = nullptr;
 		}
 
 		//Update the interface
@@ -206,4 +231,71 @@ void controller::Run()
 
 	} while (OpType != EXIT);
 
+}
+
+
+
+
+
+
+//==================================================================================//
+//							Undo/Redo Functions										//
+//==================================================================================//
+
+
+// Function to get the last operation added to the stack
+operation* controller::getLastDoneOp() {
+	if (!Operations.empty()) // if the stack is empty it returns a null pointer 
+	{
+		return Operations.top();
+	}
+	else  // otherwise it returns the top of the stack (last action)
+	{ 
+		return nullptr;
+		pGUI->PrintMessage("There are no actions to be undone!");
+	}
+}
+
+// Function to get the last undone operation added to the stack
+operation* controller::getLastUndoneOp()
+{
+	if (!UndoneOperations.empty())  // if the stack is empty it returns a null pointer 
+	{
+		return UndoneOperations.top();
+	}
+	else  // otherwise it returns the top of the stack (last undone action)
+	{
+		return nullptr;
+		pGUI->PrintMessage("There are no actions to be redone!");
+	}
+}
+
+// Function to add a new operation to the stack
+void controller::addNewOp(operation* newOperation)
+{
+	if (newOperation)
+	{
+		Operations.emplace(newOperation);
+	}
+}
+
+// Function to Undo last made action
+void controller::Undo()
+{
+	if (getLastDoneOp())
+	{
+		UndoneOperations.emplace(getLastDoneOp());
+		Operations.pop();
+	}
+
+}
+
+// Function to Redo last made action
+void controller::Redo()
+{
+	if (getLastDoneOp())
+	{
+		Operations.emplace(getLastUndoneOp());
+		UndoneOperations.pop();
+	}
 }

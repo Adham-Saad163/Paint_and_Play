@@ -26,3 +26,7 @@ void opSelect::Execute()
 		Selected_shape->SetSelected(true);
 	}
 }
+
+
+void opSelect::Undo() {}
+void opSelect::Redo() {}

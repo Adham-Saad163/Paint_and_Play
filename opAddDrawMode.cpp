@@ -19,3 +19,6 @@ void opAddDrawMode::Execute()
 	pUI->PrintMessage("Draw Mode");
 	pUI->CreateDrawToolBar();
 }
+
+void opAddDrawMode::Undo() {}
+void opAddDrawMode::Redo() {}

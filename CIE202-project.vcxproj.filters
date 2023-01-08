@@ -207,6 +207,8 @@
     <ClCompile Include="opScrample.cpp">
       <Filter>Operations</Filter>
     </ClCompile>
+    <ClCompile Include="opUndo.cpp" />
+    <ClCompile Include="opRedo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -374,6 +376,8 @@
     <ClInclude Include="opScrample.h">
       <Filter>Operations</Filter>
     </ClInclude>
+    <ClInclude Include="opUndo.h" />
+    <ClInclude Include="opRedo.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">

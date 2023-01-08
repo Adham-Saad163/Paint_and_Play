@@ -12,5 +12,7 @@ public:
 	opLoad(controller* pCont);
 	~opLoad();
 	void Execute();
+	virtual void Undo() override;
+	virtual void Redo() override;
 };
 

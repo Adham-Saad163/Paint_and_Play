@@ -52,3 +52,6 @@ void opAddLine::Execute()
 	pGr->Addshape(L);
 
 }
+
+void opAddLine::Undo() {}
+void opAddLine::Redo() {}

@@ -13,7 +13,7 @@ GUI::GUI()
 
 	StatusBarHeight = 50;
 	ToolBarHeight = 50;
-	MenuIconWidth = 60;
+	MenuIconWidth = 50;
 
 	DrawColor = BLUE;	//default Drawing color
 	FillColor = GREEN;	//default Filling color
@@ -105,6 +105,10 @@ operationType GUI::GetUseroperation() const
 			case ICON_DELETE: return DEL;
 			case ICON_SAVE: return SAVE;
 			case ICON_LOAD: return LOAD;
+
+			case ICON_UNDO: return UNDO;
+			case ICON_REDO: return REDO;
+
 			case ICON_ROTATE: return ROTATE;
 			case ICON_RESIZE: return RESIZE;
 			case ICON_MOVE: return MOVE;
@@ -225,6 +229,9 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_DELETE] = "images\\MenuIcons\\Menu_Delete.jpg";
 	MenuIconImages[ICON_SAVE] = "images\\MenuIcons\\Menu_Save.jpg";
 	MenuIconImages[ICON_LOAD] = "images\\MenuIcons\\Menu_Load.jpg";
+	MenuIconImages[ICON_UNDO] = "images\\MenuIcons\\Menu_Undo.jpg";
+	MenuIconImages[ICON_REDO] = "images\\MenuIcons\\Menu_Redo.jpg";
+
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Menu_Rotate.jpg";
 	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Menu_Resize.jpg";
 	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Menu_Move.jpg";

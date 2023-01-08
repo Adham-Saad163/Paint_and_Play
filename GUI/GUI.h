@@ -44,10 +44,13 @@ class GUI
 		ICON_COLOR_PALETTE,
 		ICON_FILL,
 		ICON_STICK,		//stick image icon
-		ICON_SELECT,
 		ICON_DELETE,
+		ICON_SELECT,
 		ICON_SAVE,
 		ICON_LOAD,
+
+		ICON_UNDO,
+		ICON_REDO,
 		ICON_PLAY,
 		ICON_ROTATE,
 		ICON_RESIZE,
@@ -73,9 +76,6 @@ class GUI
 		ICON_HIDE,
 		ICON_UNHIDE,
 		ICON_DRAW,
-
-
-
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};

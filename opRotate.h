@@ -9,4 +9,6 @@ public:
 
 
 	virtual void Execute();
+	virtual void Redo() override;
+	virtual void Undo() override;
 };
