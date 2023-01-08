@@ -197,6 +197,7 @@
     <ClCompile Include="opSave.cpp" />
     <ClCompile Include="opScrample.cpp" />
     <ClCompile Include="opSelect.cpp" />
+    <ClCompile Include="opStart.cpp" />
     <ClCompile Include="opStick.cpp" />
     <ClCompile Include="opUndo.cpp" />
     <ClCompile Include="opZoomIn.cpp" />
@@ -265,6 +266,7 @@
     <ClInclude Include="opSave.h" />
     <ClInclude Include="opScrample.h" />
     <ClInclude Include="opSelect.h" />
+    <ClInclude Include="opStart.h" />
     <ClInclude Include="opStick.h" />
     <ClInclude Include="opUndo.h" />
     <ClInclude Include="opZoomIn.h" />

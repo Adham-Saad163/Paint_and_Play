@@ -612,7 +612,7 @@ void Graph::duplicateShapes() {
 				Rect* copy = dynamic_cast<Rect*>(shapesList[i]);
 				deplicate = new Rect(copy);
 				Addshape(deplicate);
-				cout << "rect";
+				
 			}
 			if (dynamic_cast<Circle*>(shapesList[i]))
 			{
