@@ -170,6 +170,7 @@
     <ClCompile Include="IrrPoly.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="matchShapes.cpp" />
     <ClCompile Include="opAddCircle.cpp" />
     <ClCompile Include="opAddColorPalette.cpp" />
     <ClCompile Include="opAddDrawMode.cpp" />
@@ -236,6 +237,7 @@
     <ClInclude Include="DEFS.h" />
     <ClInclude Include="IrrPoly.h" />
     <ClInclude Include="Line.h" />
+    <ClInclude Include="matchShapes.h" />
     <ClInclude Include="opAddCircle.h" />
     <ClInclude Include="opAddColorPalette.h" />
     <ClInclude Include="opAddDrawMode.h" />
