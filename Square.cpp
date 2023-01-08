@@ -143,3 +143,8 @@ void Square::zoom(double scale, int x, int y)
 	Corner2.x = (Corner2.x * scale) - (scale * x) + x;
 	Corner2.y = (Corner2.y * scale) - (scale * y) + y;
 }
+
+void Square::hideShape(GUI* pUI)
+{
+	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
+}

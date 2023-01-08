@@ -111,26 +111,11 @@
     <ClCompile Include="CMUgraphicsLib\CMUgraphics.cpp">
       <Filter>GraphicsLib</Filter>
     </ClCompile>
-    <ClCompile Include="Shapes\Shape.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="Shapes\Rect.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
     <ClCompile Include="GUI\GUI.cpp">
       <Filter>GUI</Filter>
     </ClCompile>
-    <ClCompile Include="Shapes\Graph.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="Poly.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
     <ClCompile Include="opAddPolygon.cpp">
       <Filter>Operations</Filter>
-    </ClCompile>
-    <ClCompile Include="IrrPoly.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
     </ClCompile>
     <ClCompile Include="opAddIrrPolygon.cpp">
       <Filter>Operations</Filter>
@@ -143,9 +128,6 @@
     </ClCompile>
     <ClCompile Include="opAddDrawMode.cpp">
       <Filter>Operations</Filter>
-    </ClCompile>
-    <ClCompile Include="ColorPalette.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
     </ClCompile>
     <ClCompile Include="opChangeFill.cpp">
       <Filter>Operations</Filter>
@@ -165,15 +147,6 @@
     <ClCompile Include="opAddCircle.cpp">
       <Filter>Operations</Filter>
     </ClCompile>
-    <ClCompile Include="Square.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="SImage.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
     <ClCompile Include="opStick.cpp">
       <Filter>Operations</Filter>
     </ClCompile>
@@ -185,12 +158,6 @@
     </ClCompile>
     <ClCompile Include="opLoad.cpp">
       <Filter>Operations</Filter>
-    </ClCompile>
-    <ClCompile Include="Circle.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="Line.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
     </ClCompile>
     <ClCompile Include="opExit.cpp">
       <Filter>Operations</Filter>
@@ -214,6 +181,42 @@
     </ClCompile>
     <ClCompile Include="opZoomIn.cpp" />
     <ClCompile Include="opZoomOut.cpp" />
+    <ClCompile Include="matchShapes.cpp" />
+    <ClCompile Include="Hide.cpp" />
+    <ClCompile Include="UnHide.cpp" />
+    <ClCompile Include="Circle.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorPalette.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\Graph.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="IrrPoly.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Poly.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\Rect.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\Shape.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="SImage.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -284,27 +287,12 @@
     <ClInclude Include="CMUgraphicsLib\colors.h">
       <Filter>GraphicsLib</Filter>
     </ClInclude>
-    <ClInclude Include="Shapes\Shape.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
-    <ClInclude Include="Shapes\Rect.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
     <ClInclude Include="GUI\GUI.h">
       <Filter>GUI</Filter>
     </ClInclude>
-    <ClInclude Include="Shapes\Graph.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Poly.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
     <ClInclude Include="opAddPolygon.h">
       <Filter>Operations</Filter>
-    </ClInclude>
-    <ClInclude Include="IrrPoly.h">
-      <Filter>Shapes&amp;Graph</Filter>
     </ClInclude>
     <ClInclude Include="opAddIrrPolygon.h">
       <Filter>Operations</Filter>
@@ -336,15 +324,6 @@
     <ClInclude Include="opAddCircle.h">
       <Filter>Operations</Filter>
     </ClInclude>
-    <ClInclude Include="Square.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
-    <ClInclude Include="Triangle.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
-    <ClInclude Include="SImage.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
     <ClInclude Include="opSelect.h">
       <Filter>Operations</Filter>
     </ClInclude>
@@ -356,12 +335,6 @@
     </ClInclude>
     <ClInclude Include="opStick.h">
       <Filter>Operations</Filter>
-    </ClInclude>
-    <ClInclude Include="Circle.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
-    <ClInclude Include="Line.h">
-      <Filter>Shapes&amp;Graph</Filter>
     </ClInclude>
     <ClInclude Include="opExit.h">
       <Filter>Operations</Filter>
@@ -386,6 +359,39 @@
     </ClInclude>
     <ClInclude Include="opZoomIn.h" />
     <ClInclude Include="opZoomOut.h" />
+    <ClInclude Include="matchShapes.h" />
+    <ClInclude Include="Hide.h" />
+    <ClInclude Include="UnHide.h" />
+    <ClInclude Include="Circle.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Graph.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="IrrPoly.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Poly.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Rect.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Shape.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="SImage.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">

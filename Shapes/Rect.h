@@ -20,5 +20,6 @@ public:
 	virtual void  SImage(GUI* pUI);
 
 	virtual void zoom(double scale, int x, int y) override;
+	void hideShape(GUI* pUI) override;
 };
 

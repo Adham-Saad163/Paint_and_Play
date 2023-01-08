@@ -167,9 +167,11 @@
     <ClCompile Include="ColorPalette.cpp" />
     <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="controller.cpp" />
+    <ClCompile Include="Hide.cpp" />
     <ClCompile Include="IrrPoly.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="matchShapes.cpp" />
     <ClCompile Include="opAddCircle.cpp" />
     <ClCompile Include="opAddColorPalette.cpp" />
     <ClCompile Include="opAddDrawMode.cpp" />
@@ -203,6 +205,7 @@
     <ClCompile Include="SImage.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="UnHide.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
@@ -230,8 +233,10 @@
     <ClInclude Include="GUI\GUI.h" />
     <ClInclude Include="controller.h" />
     <ClInclude Include="DEFS.h" />
+    <ClInclude Include="Hide.h" />
     <ClInclude Include="IrrPoly.h" />
     <ClInclude Include="Line.h" />
+    <ClInclude Include="matchShapes.h" />
     <ClInclude Include="opAddCircle.h" />
     <ClInclude Include="opAddColorPalette.h" />
     <ClInclude Include="opAddDrawMode.h" />
@@ -267,6 +272,7 @@
     <ClInclude Include="SImage.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="Triangle.h" />
+    <ClInclude Include="UnHide.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CIE202-project.rc" />

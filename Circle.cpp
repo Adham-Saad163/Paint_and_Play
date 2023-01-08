@@ -82,3 +82,8 @@ void Circle::zoom(double scale, int x, int y)
 	Point2.x = (Point2.x * scale) - (scale * x) + x;
 	Point2.y = (Point2.y * scale) - (scale * y) + y;
 }
+
+void Circle::hideShape(GUI* pUI)
+{
+	pUI->StickImage(Image, Point1.x, Point1.y, 200, 200);
+}

@@ -41,6 +41,10 @@ public:
 
 	virtual void zoom(double scale, int x, int y) = 0;	//Zoom Shapes
 
+	virtual void hideShape(GUI* pUI) = 0;
+	void SetHiden(bool s);
+	bool IsHiden();
+
 	virtual void Rotate() = 0;	//Rotate the shape
 	virtual void Resize(double size) = 0;	//Resize the shape
 	virtual void Move(Point P) = 0;		//Move the shape

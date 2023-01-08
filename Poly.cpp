@@ -81,3 +81,8 @@ void Poly::zoom(double scale, int x, int y)
 		yArr[i] = (yArr[i] * scale) - (scale * y) + y;
 	}
 }
+
+void Poly::hideShape(GUI* pUI)
+{
+
+}

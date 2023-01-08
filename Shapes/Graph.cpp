@@ -40,6 +40,19 @@ void Graph::AddImage(SImage* pShp)
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //Draw all shapes on the user interface
+//void Graph::Draw(GUI* pUI) const
+//{
+//
+//	pUI->ClearDrawArea();
+//	for (int i = 0; i < shapesList.size(); i++) {
+//		shapesList[i]->Draw(pUI);
+//		if (shapesList[i]->IsHiden()) {
+//			shapesList[i]->hideShape(pUI);
+//		}
+//	}
+//}
+
+
 void Graph::Draw(GUI* pUI) const
 {
 	pUI->ClearDrawArea();
@@ -51,14 +64,11 @@ void Graph::Draw(GUI* pUI) const
 			shapePointer->SImage(pUI);
 		}
 	}
-		
+
 
 	//for (auto imagePointer : ImagesList)
 		//imagePointer->Draw(pUI);
 }
-
-
-
 
 void Graph::SendFromShapesListToUndo()
 {
@@ -200,6 +210,27 @@ void Graph::setColor(double& Red, double& Green, double& Blue)
 	pickedClr.Green = Green;
 	pickedClr.Blue = Blue;
 }
+
+
+void Graph::HideIt(GUI* pUI)
+{
+	for (auto shapePointer : shapesList)
+	{
+		shapePointer->SetHiden(true);
+	}
+	Draw(pUI);
+}
+
+
+void Graph::UnhideIt(GUI* pUI) 
+{
+	for (auto shapePointer : shapesList)
+	{
+		shapePointer->SetHiden(false);
+	}
+	Draw(pUI);
+}
+
 
 void Graph::DeleteSelected()
 {

@@ -27,6 +27,8 @@
 #include "opZoomIn.h"
 #include "opZoomOut.h"
 #include"matchShapes.h"
+#include "Hide.h"
+#include "UnHide.h"
 
 //Constructor
 controller::controller()
@@ -176,10 +178,19 @@ operation* controller::createOperation(operationType OpType)
 		case EXIT:
 			pOp = new opExit(this);			
 			break;
-		
-		case PLAYING_AREA:
-			pOp = new matchShapes(this);
+
+
+		case UNHIDE:
+			pOp = new UnHide(this);
 			break;
+
+		case HIDE:
+			pOp = new Hide(this);
+			break;
+		
+		//case PLAYING_AREA:
+		//	pOp = new matchShapes(this);
+		//	break;
 
 		case STATUS:	//a click on the status bar ==> no operation
 			break;

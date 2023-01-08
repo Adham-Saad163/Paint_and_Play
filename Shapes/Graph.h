@@ -62,5 +62,6 @@ public:
 	vector <shape*> getMatchedShapes();
 	void clearMatchedShapes();
 	void DeleteShape(shape* pShpToDelete);
-
+	void HideIt(GUI* pUI);
+	void UnhideIt(GUI* pUI);
 };

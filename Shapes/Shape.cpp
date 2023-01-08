@@ -22,6 +22,17 @@ void shape::ChngFillClr(color Fclr)
 
 GfxInfo shape::GetGfxinfo()const { return ShpGfxInfo; }
 
-void shape::setIsfilled(bool a) {
+void shape::setIsfilled(bool a)
+{
 	ShpGfxInfo.isFilled = a;
+}
+
+void shape::SetHiden(bool s)
+{
+	ShpGfxInfo.IsHiden = s;
+}
+
+bool shape::IsHiden()
+{
+	return ShpGfxInfo.IsHiden;
 }

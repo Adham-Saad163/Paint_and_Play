@@ -44,3 +44,4 @@ void ColorPalette::SImage(GUI* pUI)
 
 
 void ColorPalette::zoom(double scale, int x, int y) {}
+void ColorPalette::hideShape(GUI* pUI){}

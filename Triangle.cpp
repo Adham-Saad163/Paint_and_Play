@@ -140,3 +140,8 @@ void Triangle::zoom(double scale, int x, int y)
 	Corner3.x = (Corner3.x * scale) - (scale * x) + x;
 	Corner3.y = (Corner3.y * scale) - (scale * y) + y;
 }
+
+void Triangle::hideShape(GUI* pUI)
+{
+	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
+}
