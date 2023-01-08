@@ -209,6 +209,11 @@
     </ClCompile>
     <ClCompile Include="opUndo.cpp" />
     <ClCompile Include="opRedo.cpp" />
+    <ClCompile Include="opChangePenColor.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="opZoomIn.cpp" />
+    <ClCompile Include="opZoomOut.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -373,6 +378,14 @@
     <ClInclude Include="opScrample.h">
       <Filter>Operations</Filter>
     </ClInclude>
+    <ClInclude Include="ColorPalette.h" />
+    <ClInclude Include="opRedo.h" />
+    <ClInclude Include="opUndo.h" />
+    <ClInclude Include="opChangePenColor.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="opZoomIn.h" />
+    <ClInclude Include="opZoomOut.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">

@@ -21,3 +21,7 @@ void shape::ChngFillClr(color Fclr)
 }
 
 GfxInfo shape::GetGfxinfo()const { return ShpGfxInfo; }
+
+void shape::setIsfilled(bool a) {
+	ShpGfxInfo.isFilled = a;
+}

@@ -19,3 +19,6 @@ void opAddPlayMode::Execute()
 	pUI->PrintMessage("Play Mode");
 	pUI->CreatePlayToolBar();
 }
+
+void opAddPlayMode::Undo() {}
+void opAddPlayMode::Redo() {}

@@ -74,3 +74,11 @@ void Circle::SImage(GUI* pUI)
 {
 	pUI->StickImage(Image, Point1.x, Point1.y, 200, 200);
 }
+
+void Circle::zoom(double scale, int x, int y)
+{
+	Point1.x = (Point1.x * scale) - (scale * x) + x;
+	Point1.y = (Point1.y * scale) - (scale * y) + y;
+	Point2.x = (Point2.x * scale) - (scale * x) + x;
+	Point2.y = (Point2.y * scale) - (scale * y) + y;
+}

@@ -72,3 +72,12 @@ void Poly::SImage(GUI* pUI)
 {
 	
 }
+
+void Poly::zoom(double scale, int x, int y)
+{
+	for (int i = 0; i < numVertices; i++)
+	{
+		xArr[i] = (xArr[i] * scale) - (scale * x) + x;
+		yArr[i] = (yArr[i] * scale) - (scale * y) + y;
+	}
+}

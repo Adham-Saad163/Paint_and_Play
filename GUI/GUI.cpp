@@ -99,7 +99,10 @@ operationType GUI::GetUseroperation() const
 			case ICON_IRRPOLY: return DRAW_IRRPOLY;
 			case ICON_COLOR_PALETTE: return DRAW_COLOR_PALETTE;
 			case ICON_STICK:return STICK_I;
+
 			case ICON_FILL: return CHNG_FILL_CLR;
+			case ICON_PEN_COLOR: return CHANGE_PEN_COLOR;
+
 			case ICON_SELECT: return SELECT;
 			case ICON_PLAY: return TO_PLAY;
 			case ICON_DELETE: return DEL;
@@ -108,11 +111,12 @@ operationType GUI::GetUseroperation() const
 
 			case ICON_UNDO: return UNDO;
 			case ICON_REDO: return REDO;
-
 			case ICON_ROTATE: return ROTATE;
 			case ICON_RESIZE: return RESIZE;
 			case ICON_MOVE: return MOVE;
 			case ICON_SCRAMBLE: return SCRAMBLE;
+			case ICON_ZOOMIN: return ZOOMIN;
+			case ICON_ZOOMOUT: return ZOOMOUT;
 			case ICON_EXIT: return EXIT;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
@@ -232,10 +236,14 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_UNDO] = "images\\MenuIcons\\Menu_Undo.jpg";
 	MenuIconImages[ICON_REDO] = "images\\MenuIcons\\Menu_Redo.jpg";
 
+	MenuIconImages[ICON_PEN_COLOR] = "images\\MenuIcons\\Menu_Pen_Color.jpg";
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Menu_Rotate.jpg";
 	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Menu_Resize.jpg";
 	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Menu_Move.jpg";
 	MenuIconImages[ICON_SCRAMBLE] = "images\\MenuIcons\\Menu_Scrample.jpg";
+
+	MenuIconImages[ICON_ZOOMIN] = "images\\MenuIcons\\Menu_Zoom_In.jpg";
+	MenuIconImages[ICON_ZOOMOUT] = "images\\MenuIcons\\Menu_Zoom_Out.jpg";
 	MenuIconImages[ICON_EXIT] = "images\\MenuIcons\\Menu_Exit.jpg";
 
 	//TODO: Prepare images for each menu icon and add it to the list

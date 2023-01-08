@@ -179,6 +179,7 @@
     <ClCompile Include="opAddPolygon.cpp" />
     <ClCompile Include="opAddSquare.cpp" />
     <ClCompile Include="opChangeFill.cpp" />
+    <ClCompile Include="opChangePenColor.cpp" />
     <ClCompile Include="opDelete.cpp" />
     <ClCompile Include="operations\opAddRect.cpp" />
     <ClCompile Include="opExit.cpp" />
@@ -193,6 +194,8 @@
     <ClCompile Include="opSelect.cpp" />
     <ClCompile Include="opStick.cpp" />
     <ClCompile Include="opUndo.cpp" />
+    <ClCompile Include="opZoomIn.cpp" />
+    <ClCompile Include="opZoomOut.cpp" />
     <ClCompile Include="Poly.cpp" />
     <ClCompile Include="Shapes\Graph.cpp" />
     <ClCompile Include="Shapes\Shape.cpp" />
@@ -238,6 +241,7 @@
     <ClInclude Include="opAddPolygon.h" />
     <ClInclude Include="opAddSquare.h" />
     <ClInclude Include="opChangeFill.h" />
+    <ClInclude Include="opChangePenColor.h" />
     <ClInclude Include="opDelete.h" />
     <ClInclude Include="operations\opAddRect.h" />
     <ClInclude Include="operations\operation.h" />
@@ -253,6 +257,8 @@
     <ClInclude Include="opSelect.h" />
     <ClInclude Include="opStick.h" />
     <ClInclude Include="opUndo.h" />
+    <ClInclude Include="opZoomIn.h" />
+    <ClInclude Include="opZoomOut.h" />
     <ClInclude Include="Poly.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Shapes\Graph.h" />

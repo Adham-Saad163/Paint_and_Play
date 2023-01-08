@@ -19,6 +19,7 @@ void opRedo::Execute()
 	{
 		pControl->getLastUndoneOp()->Redo();
 		pControl->Redo();
+		pGr->isSaved = false;
 	}
 	else {
 		pUI->PrintMessage("There is nothing to be Redone!");

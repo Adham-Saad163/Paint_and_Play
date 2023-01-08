@@ -18,6 +18,7 @@ void opUndo::Execute()
 	{
 		pControl->getLastDoneOp()->Undo();
 		pControl->Undo();
+		pGr->isSaved = false;
 	}
 	else {
 		pUI->PrintMessage("There is nothing to be Undone!");

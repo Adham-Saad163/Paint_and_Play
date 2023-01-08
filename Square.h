@@ -21,5 +21,7 @@ public:
 	virtual void Move(Point P);
 	virtual void Scrample();
 	virtual void  SImage(GUI* pUI);
+
+	void zoom(double scale, int x, int y) override;
 };
 

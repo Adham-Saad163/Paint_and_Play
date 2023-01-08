@@ -78,10 +78,16 @@ void Graph::SendFromUndoToShapesList()
 		UndoneShapesList.erase(UndoneShapesList.end() - 1);
 		cout << "Shape moved from Undone_shapes_list to shapes_list!";
 	}
+	else {};
 }
 
 
-
+//Zoom the whole shapes in
+void Graph::ZOOMING(double scale, int x, int y)
+{
+	for (auto shapePointer : shapesList)
+		shapePointer->zoom(scale, x, y);
+}
 
 
 
@@ -194,6 +200,7 @@ void Graph::SaveShapes(ofstream& outfile, GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++)
 	{
 		shapesList[i]->Save(outfile, i + 1);
+		isSaved = true;
 
 	}
 }

@@ -29,6 +29,7 @@ private:
 	PickedColor pickedClr;
 public:				
 
+	bool isSaved = false;		//boolean to check save & unsave shapes
 	void SendFromShapesListToUndo();
 	void SendFromUndoToShapesList();
 
@@ -50,4 +51,5 @@ public:
 	color getColor();
 	void setColor(double&, double&, double&); // Sets the color to the chosen color from palette
 	bool isSelected(bool B);
+	void ZOOMING(double scale, int x, int y);
 };
