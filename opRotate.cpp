@@ -23,5 +23,7 @@ void opRotate::Execute()
 		Selected_shape->Rotate();
 
 	}
-
 }
+
+void opRotate::Undo() {}
+void opRotate::Redo() {}

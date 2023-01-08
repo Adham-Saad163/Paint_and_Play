@@ -64,3 +64,11 @@ void Poly::Move(Point P)
 {
 
 }
+void Poly::Scrample()
+{
+
+}
+void Poly::SImage(GUI* pUI)
+{
+	
+}

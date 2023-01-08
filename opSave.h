@@ -20,4 +20,6 @@ public:
 	opSave(controller* pCont);
 	virtual void ReadOperationParameters();
 	virtual void Execute();
+	virtual void Undo() override;
+	virtual void Redo() override;
 };

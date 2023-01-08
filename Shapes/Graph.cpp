@@ -9,6 +9,8 @@
 #include"../Square.h"
 #include"../Poly.h"
 #include"../IrrPoly.h"
+#include <iostream>
+
 
 
 Graph::Graph()
@@ -33,7 +35,7 @@ void Graph::Addshape(shape* pShp)
 }
 void Graph::AddImage(SImage* pShp)
 {
-	//Add a new shape to the shapes vector
+	
 	ImagesList.push_back(pShp);
 }
 ////////////////////////////////////////////////////////////////////////////////////
@@ -42,17 +44,54 @@ void Graph::Draw(GUI* pUI) const
 {
 	pUI->ClearDrawArea();
 	for (auto shapePointer : shapesList)
+	{
 		shapePointer->Draw(pUI);
+		if (shapePointer->IsSticked)
+		{
+			shapePointer->SImage(pUI);
+		}
+	}
+		
 
-	for (auto imagePointer : ImagesList)
-		imagePointer->Draw(pUI);
+	//for (auto imagePointer : ImagesList)
+		//imagePointer->Draw(pUI);
 }
+
+
+
+
+void Graph::SendFromShapesListToUndo()
+{
+	if (shapesList[shapesList.size() - 1]) // Excutes if there are 1+
+	{
+		UndoneShapesList.push_back(shapesList[shapesList.size() - 1]);
+		shapesList.erase(shapesList.end() - 1);
+		cout << "Shape moved from shapes_list to Undone_shapes_list!";
+	}
+}
+
+void Graph::SendFromUndoToShapesList()
+{
+	if (UndoneShapesList[UndoneShapesList.size() - 1])
+	{
+		shapesList.push_back(UndoneShapesList[UndoneShapesList.size() - 1]);
+		UndoneShapesList.erase(UndoneShapesList.end() - 1);
+		cout << "Shape moved from Undone_shapes_list to shapes_list!";
+	}
+}
+
+
+
 
 
 
 bool outSide_shape = true;
 
+bool Graph::isSelected(bool B)
+{
+	return B;
 
+}
 
 shape* Graph::Getshape(int x, int y) const{
 	for (auto shapePointer : shapesList) {
@@ -71,9 +110,36 @@ shape* Graph::Getshape(int x, int y) const{
 	}
 return nullptr;
 }
-void Graph::Scrample()
+shape* Graph::getSelectedShape()
 {
 	
+	for (auto shapePointer : shapesList)
+	{
+		if (shapePointer->IsSelected())
+		{
+			selectedShape = shapePointer;
+		}
+	}
+	if (selectedShape != nullptr)
+	{
+		return selectedShape;
+	}
+	else
+	{
+
+		return nullptr;
+	}
+}
+
+
+void Graph::Scrample()
+{
+	srand(time(0));
+	for (int i = 0; i < shapesList.size(); i++)
+	{
+		shapesList[i]->Scrample();
+
+	}
 }
 void Graph::setFilled(bool ans)
 {

@@ -16,6 +16,7 @@ struct GfxInfo	//Graphical info common for all shapes (you may add more members)
 	bool isFilled;	//shape Filled or not
 	int BorderWdth;	//Width of shape borders
 	bool isSelected;	//true if the shape is selected.
+	
 };
 
 
@@ -44,10 +45,13 @@ class GUI
 		ICON_COLOR_PALETTE,
 		ICON_FILL,
 		ICON_STICK,		//stick image icon
-		ICON_SELECT,
 		ICON_DELETE,
+		ICON_SELECT,
 		ICON_SAVE,
 		ICON_LOAD,
+
+		ICON_UNDO,
+		ICON_REDO,
 		ICON_PLAY,
 		ICON_ROTATE,
 		ICON_RESIZE,
@@ -73,9 +77,6 @@ class GUI
 		ICON_HIDE,
 		ICON_UNHIDE,
 		ICON_DRAW,
-
-
-
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
@@ -110,6 +111,7 @@ public:
 
 	// Input Functions  ---------------------------
 	void GetPointClicked(int& x, int& y) const;//Get coordinate where user clicks
+	 window* DetectMouse();
 	string GetSrting() const;	 //Returns a string entered by the user
 	operationType GetUseroperation() const; //Read the user click and map to an operation
 

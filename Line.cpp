@@ -90,3 +90,26 @@ void Line::Move(Point P)
 	Corner2.y = Temp2y + dy;
 	 
 }
+void Line::Scrample()
+{
+	
+	int temp1 = (rand() % 1000);
+	int temp2 = (rand() % 500);
+	double CenterX = (Corner1.x + Corner2.x) / 2;
+	double CenterY = (Corner1.y + Corner2.y) / 2;
+	double dx = temp1 - CenterX;
+	double dy = temp2 - CenterY;
+	int Temp1x = Corner1.x;
+	int Temp1y = Corner1.y;
+	int Temp2x = Corner2.x;
+	int Temp2y = Corner2.y;
+
+	Corner1.x = Temp1x + dx;
+	Corner1.y = Temp1y + dy;
+	Corner2.x = Temp2x + dx;
+	Corner2.y = Temp2y + dy;
+}
+void Line::SImage(GUI* pUI)
+{
+	
+}

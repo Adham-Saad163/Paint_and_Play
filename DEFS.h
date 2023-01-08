@@ -27,8 +27,10 @@ enum operationType //The operations supported (you can add more if needed)
 	BRNG_FRNT,		//Bring a shape to the front of all shapes
 	SAVE,			//Save the whole graph to a file
 	LOAD,			//Load a graph from a file
+	UNDO,			// Undo action
+	REDO,			// Redo action
 	EXIT,			//Exit the application
-	SCRAMBLE,
+	SCRAMBLE,		//Scramble shapes 
 	DRAWING_AREA,	//A click on the drawing area
 	STATUS,			//A click on the status bar
 	EMPTY,			//A click on empty place in the toolbar

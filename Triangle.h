@@ -7,6 +7,7 @@ private:
 	Point Corner1;
 	Point Corner2;
 	Point Corner3;
+	string Image= "images\\MenuIcons\\Menu_Stick_Image.jpg";
 public:
 	double  getTriArea(int x1, int y1, int x2, int y2, int x3, int y3);
 	virtual bool  insideShape(int x, int y);
@@ -17,6 +18,10 @@ public:
 	virtual void Rotate();
 	virtual void Resize(double size);
 	virtual void Move(Point P);
+	virtual void Scrample() ;
+	virtual void  SImage(GUI* pUI) ;
+
+
 	
 };
 

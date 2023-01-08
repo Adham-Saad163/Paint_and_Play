@@ -62,3 +62,15 @@ void Circle::Move(Point P)
 	Point1.y = Temp2;
 }
 
+void Circle::Scrample()
+{
+	
+	int temp1 = (rand() % 1000);
+	int temp2= (rand() % 500);
+	Point1.x = temp1;
+	Point1.y = temp2;
+}
+void Circle::SImage(GUI* pUI)
+{
+	pUI->StickImage(Image, Point1.x, Point1.y, 200, 200);
+}

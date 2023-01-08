@@ -61,3 +61,11 @@ void IrrPoly::Move(Point P)
 {
 
 }
+void IrrPoly::Scrample()
+{
+
+}
+void IrrPoly::SImage(GUI* pUI)
+{
+	
+}

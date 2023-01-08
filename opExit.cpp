@@ -44,6 +44,8 @@ void opExit::Execute() {
 	{
 		exit;
 	}
-
-
 }
+
+
+void opExit::Undo() {}
+void opExit::Redo() {}

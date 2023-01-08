@@ -54,3 +54,6 @@ void oppAddTriangle::Execute()
 	pGr->Addshape(T);
 
 }
+
+void oppAddTriangle::Undo() {}
+void oppAddTriangle::Redo() {}

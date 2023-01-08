@@ -64,3 +64,15 @@ void opAddPolygon::Execute()
 	pGr->Addshape(pol);
 
 }
+
+
+void opAddPolygon::Undo()
+{
+	Graph* pGr = pControl->getGraph();
+	pGr->SendFromShapesListToUndo();
+}
+void opAddPolygon::Redo()
+{
+	Graph* pGr = pControl->getGraph();
+	pGr->SendFromUndoToShapesList();
+}

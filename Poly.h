@@ -7,6 +7,7 @@ private:
 	Point point1;
 	Point center;
 	int numVertices = 0;
+	
 
 	// making two dynamic arrays for the x-cords of verices and the y-cords of vertices
 	int* xArr = new int[numVertices];
@@ -21,7 +22,8 @@ public:
 	virtual void Rotate();
 	virtual void Resize(double size);
 	virtual void Move(Point P);
-	
+	virtual void Scrample();
+	virtual void  SImage(GUI* pUI);
 };
 
 

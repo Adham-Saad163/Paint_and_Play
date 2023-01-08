@@ -18,8 +18,8 @@ public:
 	virtual ~shape() {}
 	void SetSelected(bool s);	//select/unselect the shape
 	bool IsSelected() const;	//check whether fig is selected
-
-
+	bool IsSticked=false ; 
+	virtual void  SImage(GUI* pUI)=0;
 
 	virtual bool insideShape(int x, int y) = 0;
 
@@ -40,7 +40,7 @@ public:
 	virtual void Rotate() = 0;	//Rotate the shape
 	virtual void Resize(double size) = 0;	//Resize the shape
 	virtual void Move(Point P) = 0;		//Move the shape
-	
+	virtual void Scrample() = 0;
 	virtual void Save(ofstream &OutFile, int id) = 0;	//Save the shape parameters to the file
 	//virtual void Load(ifstream &Infile) = 0;	//Load the shape parameters to the file
 
