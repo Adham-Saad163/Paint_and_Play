@@ -15,9 +15,7 @@ void opMove::Execute()
     GUI* pUI = pControl->GetUI();
     Graph* pGr = pControl->getGraph();
     window* pWind = pUI->DetectMouse();
-   
-    
-       
+
         while (pWind->GetButtonState(LEFT_BUTTON, P.x, P.y) != BUTTON_DOWN)
         {
             if (pGr->Getshape(P.x, P.y) != nullptr)
