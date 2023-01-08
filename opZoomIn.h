@@ -1,17 +1,14 @@
+
 #pragma once
 #include "operations/operation.h"
 
-class opAddPlayMode : public operation
+class opZoomIn :public operation
 {
-private:
-	controller* pCont;
 public:
-	opAddPlayMode(controller* pCont);
+	opZoomIn(controller* pCont);
+	virtual ~opZoomIn();
 	virtual void Execute();
 	virtual void Undo() override;
 	virtual void Redo() override;
 };
-
-
-
 

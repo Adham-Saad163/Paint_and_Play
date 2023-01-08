@@ -19,6 +19,9 @@ public:
 	void SetSelected(bool s);	//select/unselect the shape
 	bool IsSelected() const;	//check whether fig is selected
 	bool IsSticked=false ; 
+
+	void setIsfilled(bool);
+
 	virtual void  SImage(GUI* pUI)=0;
 
 	virtual bool insideShape(int x, int y) = 0;
@@ -36,6 +39,7 @@ public:
 
 	///Decide the parameters that you should pass to each function	
 
+	virtual void zoom(double scale, int x, int y) = 0;	//Zoom Shapes
 
 	virtual void Rotate() = 0;	//Rotate the shape
 	virtual void Resize(double size) = 0;	//Resize the shape

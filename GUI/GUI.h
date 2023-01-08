@@ -43,6 +43,7 @@ class GUI
 		ICON_IRRPOLY,
 
 		ICON_COLOR_PALETTE,
+		ICON_PEN_COLOR,
 		ICON_FILL,
 		ICON_STICK,		//stick image icon
 		ICON_DELETE,
@@ -50,13 +51,15 @@ class GUI
 		ICON_SAVE,
 		ICON_LOAD,
 
+		ICON_PLAY,
 		ICON_UNDO,
 		ICON_REDO,
-		ICON_PLAY,
 		ICON_ROTATE,
 		ICON_RESIZE,
 		ICON_MOVE,
 		ICON_SCRAMBLE,
+		ICON_ZOOMIN,
+		ICON_ZOOMOUT,
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
@@ -147,6 +150,7 @@ public:
 	color getCrntFillColor() const;	//get current filling color
 	int getCrntPenWidth() const;		//get current pen width
 
+	void getMouseCoord(int&, int&) const;
 
 	~GUI();
 };

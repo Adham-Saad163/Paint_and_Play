@@ -42,6 +42,9 @@ void ColorPalette::SImage(GUI* pUI)
 
 }
 
+
+void ColorPalette::zoom(double scale, int x, int y) {}
+
 shape* ColorPalette::clone()
 {
 	return nullptr;

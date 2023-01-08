@@ -114,6 +114,15 @@ void Line::SImage(GUI* pUI)
 	
 }
 
+void Line::zoom(double scale, int x, int y)
+{
+	Corner1.x = (Corner1.x * scale) - (scale * x) + x;
+	Corner1.y = (Corner1.y * scale) - (scale * y) + y;
+	Corner2.x = (Corner2.x * scale) - (scale * x) + x;
+	Corner2.y = (Corner2.y * scale) - (scale * y) + y;
+}
+}
+
 shape* Line::clone()
 {
 	shape* newShape = new Line(*this);

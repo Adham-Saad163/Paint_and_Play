@@ -24,7 +24,6 @@ public:
 	virtual shape* clone();
 	virtual Point getUpper();
 
-
-	
+	void zoom(double scale, int x, int y) override;
 };
 

@@ -78,12 +78,46 @@ void Graph::SendFromUndoToShapesList()
 		UndoneShapesList.erase(UndoneShapesList.end() - 1);
 		cout << "Shape moved from Undone_shapes_list to shapes_list!";
 	}
+	else {};
+}
+
+
+//Zoom the whole shapes in
+void Graph::ZOOMING(double scale, int x, int y)
+{
+	for (auto shapePointer : shapesList)
+		shapePointer->zoom(scale, x, y);
 }
 
 
 
+void Graph::unSeletAll()
+{
+	for (auto shapePointer : shapesList)
+		shapePointer->SetSelected(false);
+	selectedShape = nullptr;
+	selectedShapes.clear();
+}
 
+void Graph::addSelectedShape(shape* pShp)
+{
+	selectedShapes.push_back(pShp);
+}
 
+vector <shape*> Graph::getMatchedShapes()
+{
+	return matchedShapes;
+}
+
+void Graph::addMatchedShape(shape* shp)
+{
+	matchedShapes.push_back(shp);
+}
+
+void Graph::clearMatchedShapes()
+{
+	matchedShapes.clear();
+}
 
 bool outSide_shape = true;
 
@@ -181,6 +215,13 @@ void Graph::DeleteSelected()
 	}
 }
 
+void Graph::DeleteShape(shape* pShp) {
+	std::vector<shape*>::iterator it;
+	it = std::find(shapesList.begin(), shapesList.end(), pShp);
+	UndoneShapesList.push_back(it[0]);
+	shapesList.erase(it);
+}
+
 void Graph::SaveShapes(ofstream& outfile, GUI* pUI) {
 
 	color CrDrwC = pUI->getCrntDrawColor();
@@ -194,6 +235,7 @@ void Graph::SaveShapes(ofstream& outfile, GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++)
 	{
 		shapesList[i]->Save(outfile, i + 1);
+		isSaved = true;
 
 	}
 }

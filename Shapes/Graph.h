@@ -28,9 +28,13 @@ private:
 	shape* selectedShape;	//pointer to the currently selected shape
 	shape* copiedShape;
 	PickedColor pickedClr;
+	vector <shape*> matchedShapes;
+	vector <shape*> selectedShapes;
+
 	vector <shape*> clipboard;
 public:				
 
+	bool isSaved = false;		//boolean to check save & unsave shapes
 	void SendFromShapesListToUndo();
 	void SendFromUndoToShapesList();
 
@@ -54,6 +58,15 @@ public:
 	shape* GetSelected(); // return a pointer of the selected shape
 	void setCopied(shape*);
 	bool isSelected(bool B);
+	void ZOOMING(double scale, int x, int y);
+
+	void unSeletAll();
+	void addSelectedShape(shape* pNewShape);
+	void addMatchedShape(shape *pNewMatchedShape);
+	vector <shape*> getMatchedShapes();
+	void clearMatchedShapes();
+	void DeleteShape(shape* pShpToDelete);
+
 	shape* getCopied();
 	void clearClipboard();
 	void CopyShape();

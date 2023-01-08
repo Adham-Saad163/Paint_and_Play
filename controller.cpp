@@ -21,9 +21,12 @@
 #include "opMove.h"
 #include "opScrample.h"
 
-
+#include "opChangePenColor.h"
 #include "opUndo.h"
 #include "opRedo.h"
+#include "opZoomIn.h"
+#include "opZoomOut.h"
+#include"matchShapes.h"
 #include "opCopy.h"
 #include"opCut.h"
 #include"oppaste.h"
@@ -124,6 +127,17 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opChangeFill(this);
 			break;
 
+		case CHANGE_PEN_COLOR:
+			pOp = new opChangePenColor(this);
+			break;
+
+		case ZOOMIN:
+			pOp = new opZoomIn(this);
+			break;
+
+		case ZOOMOUT:
+			pOp = new opZoomOut(this);
+			break;
 
 		case DEL:
 			pOp = new opDelete(this);
@@ -158,7 +172,6 @@ operation* controller::createOperation(operationType OpType)
 		case MOVE:
 			pOp = new opMove(this);
 			addNewOp(pOp);
-			break;
 
 		case SCRAMBLE:
 			pOp = new opScrample(this);
@@ -168,8 +181,13 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opExit(this);			
 			break;
 		
+		case PLAYING_AREA:
+			pOp = new matchShapes(this);
+			break;
+
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
+
 	}
 
 	return pOp;

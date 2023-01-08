@@ -40,7 +40,6 @@ void opAddColorPalette::Execute()
 
 	pGr->setColor(Red, Green, Blue);
 	pUI->setFillcolor(pGr->getColor());
-	pUI->setDrawColor(pGr->getColor()); // sets pen color (drawing color) to the picked color of 
 	pUI->PrintMessage("New color is picked!");
 	pGr->RemoveShape(R);
 }

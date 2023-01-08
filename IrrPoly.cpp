@@ -3,9 +3,9 @@
 #include <corecrt_math_defines.h>
 
 
-IrrPoly::IrrPoly(Point* input_yArr, int input_numVertices, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
+IrrPoly::IrrPoly(Point* input_pArr, int input_numVertices, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
-	Arr = input_yArr;
+	Arr = input_pArr;
 	numVertices = input_numVertices;
 }
 
@@ -68,6 +68,16 @@ void IrrPoly::Scrample()
 void IrrPoly::SImage(GUI* pUI)
 {
 	
+}
+
+void IrrPoly::zoom(double scale, int x, int y)
+{
+	for (int i = 0; i < numVertices; i++)
+	{
+		Arr[i].x = (Arr[i].x * scale) - (scale * x) + x;
+		Arr[i].y = (Arr[i].y * scale) - (scale * y) + y;
+	}
+}
 }
 
 shape* IrrPoly::clone()
