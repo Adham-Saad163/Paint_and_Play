@@ -33,7 +33,6 @@ public:
 	void SendFromUndoToShapesList();
 
 	bool isFilled = false;
-	int Selectd = 0;
 	Graph();
 	~Graph();
 	void Addshape(shape* pFig); //Adds a new shape to the shapesList
@@ -50,4 +49,5 @@ public:
 	void RemoveShape(shape* pShp); // Removes the Last added Shape
 	color getColor();
 	void setColor(double&, double&, double&); // Sets the color to the chosen color from palette
+	bool isSelected(bool B);
 };

@@ -6,6 +6,7 @@ class Rect : public shape
 private:
 	Point Corner1;	
 	Point Corner2;
+	string Image = "images\\MenuIcons\\Menu_Stick_Image.jpg";
 public:
 	Rect(Point , Point, GfxInfo shapeGfxInfo );
 	virtual ~Rect();
@@ -16,6 +17,6 @@ public:
 	virtual void Resize(double size);
 	virtual void Move(Point P);
 	virtual void Scrample();
-
+	virtual void  SImage(GUI* pUI);
 };
 

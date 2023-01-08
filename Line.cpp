@@ -109,3 +109,7 @@ void Line::Scrample()
 	Corner2.x = Temp2x + dx;
 	Corner2.y = Temp2y + dy;
 }
+void Line::SImage(GUI* pUI)
+{
+	
+}

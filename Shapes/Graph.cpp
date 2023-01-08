@@ -35,7 +35,7 @@ void Graph::Addshape(shape* pShp)
 }
 void Graph::AddImage(SImage* pShp)
 {
-	//Add a new shape to the shapes vector
+	
 	ImagesList.push_back(pShp);
 }
 ////////////////////////////////////////////////////////////////////////////////////
@@ -44,10 +44,17 @@ void Graph::Draw(GUI* pUI) const
 {
 	pUI->ClearDrawArea();
 	for (auto shapePointer : shapesList)
+	{
 		shapePointer->Draw(pUI);
+		if (shapePointer->IsSticked)
+		{
+			shapePointer->SImage(pUI);
+		}
+	}
+		
 
-	for (auto imagePointer : ImagesList)
-		imagePointer->Draw(pUI);
+	//for (auto imagePointer : ImagesList)
+		//imagePointer->Draw(pUI);
 }
 
 
@@ -80,7 +87,11 @@ void Graph::SendFromUndoToShapesList()
 
 bool outSide_shape = true;
 
+bool Graph::isSelected(bool B)
+{
+	return B;
 
+}
 
 shape* Graph::Getshape(int x, int y) const{
 	for (auto shapePointer : shapesList) {
@@ -102,7 +113,6 @@ return nullptr;
 shape* Graph::getSelectedShape()
 {
 	
-
 	for (auto shapePointer : shapesList)
 	{
 		if (shapePointer->IsSelected())
@@ -110,9 +120,8 @@ shape* Graph::getSelectedShape()
 			selectedShape = shapePointer;
 		}
 	}
-	if (selectedShape != NULL)
+	if (selectedShape != nullptr)
 	{
-		Selectd += 1;
 		return selectedShape;
 	}
 	else

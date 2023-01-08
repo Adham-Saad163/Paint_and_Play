@@ -7,6 +7,7 @@ Triangle::Triangle(Point P1, Point P2, Point P3, GfxInfo shapeGfxInfo) :shape(sh
 	Corner1 = P1;
 	Corner2 = P2;
 	Corner3 = P3;
+
 }
 Triangle::~Triangle()
 {}
@@ -124,4 +125,8 @@ void Triangle::Scrample()
 	Corner2.y = Temp2y + dy;
 	Corner3.x = Temp3x + dx;
 	Corner3.y = Temp3y + dy;
+}
+void Triangle::SImage(GUI* pUI) 
+{
+	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
 }

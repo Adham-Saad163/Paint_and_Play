@@ -18,8 +18,8 @@ public:
 	virtual ~shape() {}
 	void SetSelected(bool s);	//select/unselect the shape
 	bool IsSelected() const;	//check whether fig is selected
-
-
+	bool IsSticked=false ; 
+	virtual void  SImage(GUI* pUI)=0;
 
 	virtual bool insideShape(int x, int y) = 0;
 
