@@ -7,6 +7,8 @@ public:
 	opMove(controller* pCont);
 	virtual ~opMove();
 	virtual void Execute();
-	
+
+	virtual void Undo() override;
+	virtual void Redo() override;
 };
 

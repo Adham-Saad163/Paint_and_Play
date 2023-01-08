@@ -8,4 +8,6 @@ public:
 	opStick(controller* pCont);
 	virtual ~opStick();
 	virtual void Execute();
+	virtual void Undo() override;
+	virtual void Redo() override;
 };

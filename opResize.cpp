@@ -28,3 +28,12 @@ void opResize::Execute()
 	}
 
 }
+
+void opResize::Undo() {
+	Graph* pGr = pControl->getGraph();
+	pGr->SendFromShapesListToUndo();
+}
+void opResize::Redo() {
+	Graph* pGr = pControl->getGraph();
+	pGr->SendFromUndoToShapesList();
+}

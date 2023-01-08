@@ -24,3 +24,7 @@ void opStick::Execute()
 	
 	}
 }
+
+
+void opStick::Undo() {}
+void opStick::Redo() {}

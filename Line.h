@@ -12,6 +12,7 @@ public:
 	virtual ~Line();
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& outfile, int id);
+
 	virtual void Rotate();
 	virtual void Resize(double size);
 	virtual void Move(Point P);

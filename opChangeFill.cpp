@@ -16,3 +16,7 @@ void opChangeFill::Execute()
 	pUI->setFillcolor(pGr->getColor());
 	pUI->PrintMessage("Now shapes will be filled!");
 }
+
+
+void opChangeFill::Undo() {}
+void opChangeFill::Redo() {}

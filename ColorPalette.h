@@ -16,4 +16,9 @@ public:
 	virtual void Scrample();
 	virtual void  SImage(GUI* pUI);
 
+
+	 void Rotate() override;	
+	 void Resize(double size) override;	
+	 void Move(Point P) override;		
+	 void Scrample() override;
 };

@@ -17,3 +17,7 @@ void opScrample::Execute()
 	pUI->PrintMessage("Shapes are Scrambled");
 	pUI->ClearStatusBar();
 }
+
+
+void opScrample::Undo() {}
+void opScrample::Redo() {}

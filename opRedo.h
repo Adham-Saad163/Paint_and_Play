@@ -1,15 +1,12 @@
 #pragma once
 #include "operations/operation.h"
 
-
-class opScrample : public operation
+class opRedo : public operation
 {
-
 public:
-	opScrample(controller* pCont);
-	virtual ~opScrample();
+	opRedo(controller* pCont);
+	virtual ~opRedo();
 	virtual void Execute();
-
 	virtual void Undo() override;
 	virtual void Redo() override;
 };

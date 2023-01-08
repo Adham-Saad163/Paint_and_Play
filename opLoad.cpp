@@ -19,3 +19,6 @@ void opLoad::Execute()
 	pGraph->load(inFile, pUI);
 
 }
+
+void opLoad::Undo() {}
+void opLoad::Redo() {}

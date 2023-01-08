@@ -21,11 +21,17 @@ struct PickedColor
 class Graph
 {
 private:
+	vector <shape*> UndoneShapesList; // a container to hold all undone shapes
+
 	vector <shape*> shapesList; //a container to hold all shapes							   
 	vector <SImage*> ImagesList;
 	shape* selectedShape;	//pointer to the currently selected shape
 	PickedColor pickedClr;
-public:										
+public:				
+
+	void SendFromShapesListToUndo();
+	void SendFromUndoToShapesList();
+
 	bool isFilled = false;
 	Graph();
 	~Graph();

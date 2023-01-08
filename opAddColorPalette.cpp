@@ -44,3 +44,6 @@ void opAddColorPalette::Execute()
 	pUI->PrintMessage("New color is picked!");
 	pGr->RemoveShape(R);
 }
+
+void opAddColorPalette::Undo() {}
+void opAddColorPalette::Redo() {}
