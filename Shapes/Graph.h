@@ -27,6 +27,9 @@ private:
 	vector <SImage*> ImagesList;
 	shape* selectedShape;	//pointer to the currently selected shape
 	PickedColor pickedClr;
+	vector <shape*> matchedShapes;
+	vector <shape*> selectedShapes;
+
 public:				
 
 	bool isSaved = false;		//boolean to check save & unsave shapes
@@ -52,4 +55,12 @@ public:
 	void setColor(double&, double&, double&); // Sets the color to the chosen color from palette
 	bool isSelected(bool B);
 	void ZOOMING(double scale, int x, int y);
+
+	void unSeletAll();
+	void addSelectedShape(shape* pNewShape);
+	void addMatchedShape(shape *pNewMatchedShape);
+	vector <shape*> getMatchedShapes();
+	void clearMatchedShapes();
+	void DeleteShape(shape* pShpToDelete);
+
 };

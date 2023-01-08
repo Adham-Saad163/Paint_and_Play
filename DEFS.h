@@ -40,6 +40,8 @@ enum operationType //The operations supported (you can add more if needed)
 	STATUS,			//A click on the status bar
 	EMPTY,			//A click on empty place in the toolbar
 
+	START,			//start the play mode
+	PLAYING_AREA,
 	CHANGE_PEN_COLOR,
 	TO_DRAW,		//Switch interface to Draw mode
 	TO_PLAY			//Switch interface to Play mode

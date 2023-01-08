@@ -43,6 +43,13 @@ void GUI::GetPointClicked(int& x, int& y) const
 {
 	pWind->WaitMouseClick(x, y);	//Wait for mouse click
 }
+
+void GUI::getMouseCoord(int& x, int& y) const
+{
+	pWind->FlushMouseQueue();
+	pWind->GetMouseCoord(x, y);
+}
+
 window* GUI::DetectMouse()
 {
 	return this->pWind;
@@ -152,7 +159,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_EXIT: return EXIT;
 
 
-			//case ICON_START: return   ;
+			case ICON_START: return  START;
 			//case ICON_RESTART: return  ;
 			//case ICON_HIDE: return   ;
 			//case ICON_UNHIDE: return   ;

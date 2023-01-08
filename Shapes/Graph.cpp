@@ -91,6 +91,34 @@ void Graph::ZOOMING(double scale, int x, int y)
 
 
 
+void Graph::unSeletAll()
+{
+	for (auto shapePointer : shapesList)
+		shapePointer->SetSelected(false);
+	selectedShape = nullptr;
+	selectedShapes.clear();
+}
+
+void Graph::addSelectedShape(shape* pShp)
+{
+	selectedShapes.push_back(pShp);
+}
+
+vector <shape*> Graph::getMatchedShapes()
+{
+	return matchedShapes;
+}
+
+void Graph::addMatchedShape(shape* shp)
+{
+	matchedShapes.push_back(shp);
+}
+
+void Graph::clearMatchedShapes()
+{
+	matchedShapes.clear();
+}
+
 bool outSide_shape = true;
 
 bool Graph::isSelected(bool B)
@@ -185,6 +213,13 @@ void Graph::DeleteSelected()
 			i--;
 		}
 	}
+}
+
+void Graph::DeleteShape(shape* pShp) {
+	std::vector<shape*>::iterator it;
+	it = std::find(shapesList.begin(), shapesList.end(), pShp);
+	UndoneShapesList.push_back(it[0]);
+	shapesList.erase(it);
 }
 
 void Graph::SaveShapes(ofstream& outfile, GUI* pUI) {

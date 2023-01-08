@@ -150,6 +150,7 @@ public:
 	color getCrntFillColor() const;	//get current filling color
 	int getCrntPenWidth() const;		//get current pen width
 
+	void getMouseCoord(int&, int&) const;
 
 	~GUI();
 };

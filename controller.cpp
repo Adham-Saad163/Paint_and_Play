@@ -26,6 +26,7 @@
 #include "opRedo.h"
 #include "opZoomIn.h"
 #include "opZoomOut.h"
+#include"matchShapes.h"
 
 //Constructor
 controller::controller()
@@ -176,8 +177,13 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opExit(this);			
 			break;
 		
+		case PLAYING_AREA:
+			pOp = new matchShapes(this);
+			break;
+
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
+
 	}
 
 	return pOp;
