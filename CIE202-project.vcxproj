@@ -179,6 +179,8 @@
     <ClCompile Include="opAddPolygon.cpp" />
     <ClCompile Include="opAddSquare.cpp" />
     <ClCompile Include="opChangeFill.cpp" />
+    <ClCompile Include="opCopy.cpp" />
+    <ClCompile Include="opCut.cpp" />
     <ClCompile Include="opDelete.cpp" />
     <ClCompile Include="operations\opAddRect.cpp" />
     <ClCompile Include="opExit.cpp" />
@@ -236,6 +238,8 @@
     <ClInclude Include="opAddPolygon.h" />
     <ClInclude Include="opAddSquare.h" />
     <ClInclude Include="opChangeFill.h" />
+    <ClInclude Include="opCopy.h" />
+    <ClInclude Include="opCut.h" />
     <ClInclude Include="opDelete.h" />
     <ClInclude Include="operations\opAddRect.h" />
     <ClInclude Include="operations\operation.h" />

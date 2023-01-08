@@ -24,6 +24,7 @@ private:
 	vector <shape*> shapesList; //a container to hold all shapes							   
 	vector <SImage*> ImagesList;
 	shape* selectedShape;	//pointer to the currently selected shape
+	shape* copiedShape;
 	PickedColor pickedClr;
 public:										
 	bool isFilled = false;
@@ -43,4 +44,6 @@ public:
 	void RemoveShape(shape* pShp); // Removes the Last added Shape
 	color getColor();
 	void setColor(double&, double&, double&); // Sets the color to the chosen color from palette
+	shape* GetSelected(); // return a pointer of the selected shape
+	void setCopied(shape*);
 };

@@ -418,3 +418,12 @@ void Graph::load(ifstream& inputfile, GUI* pUI)
 	pUI->CreateStatusBar();
 }
 
+shape* Graph::GetSelected()
+{
+	return selectedShape;
+}
+
+void Graph::setCopied(shape* copied) {
+	copiedShape = copied;
+}
+
