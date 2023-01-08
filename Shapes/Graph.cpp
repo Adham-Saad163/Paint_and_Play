@@ -310,16 +310,7 @@ void Graph::load(ifstream& inputfile, GUI* pUI)
 				Info.isFilled = false;
 				Info.FillClr = NULL;
 			}
-			/*else {
-
-				inputfile >> fillGreen >> fillBLue;
-				int fred = stoi(fillRed);
-				int fgreen = stoi(fillGreen);
-				int fblue = stoi(fillBLue);
-				color FClr = ConvertColor(fred, fgreen, fblue);
-				Info.FillClr = FClr;
-				Info.isFilled = true;
-			}*/
+			
 
 			Line* L = new Line(p1, p2, Info);
 			Addshape(L);
@@ -492,4 +483,123 @@ shape* Graph::GetSelected()
 void Graph::setCopied(shape* copied) {
 	copiedShape = copied;
 }
+
+shape* Graph::getCopied() {
+	return copiedShape;
+}
+
+void Graph::deselectAll()
+{
+	
+	for (auto* shp : shapesList) {
+		
+			shp->SetSelected(0);
+		
+	}
+}
+
+void Graph::clearClipboard()
+{
+	clipboard.clear();
+
+}
+
+void Graph::PasteShape(Point p)
+
+{
+		if (!clipboard.empty()) {
+			
+			for (int i = 0; i < clipboard.size(); i++) {
+
+				shape* newShape = clipboard[i]->clone();
+				newShape->Move(p);
+				shapesList.push_back(newShape);
+
+			}
+		}
+		deselectAll();
+		clearClipboard();
+	
+}
+
+void Graph::CopyShape()
+{
+		for (int i = 0; i < shapesList.size(); i++) {
+			if (shapesList[i]->IsSelected()) {
+				clipboard.push_back(shapesList[i]);
+			}
+		}
+
+		deselectAll();
+}
+
+void Graph::CutShape()
+{
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->IsSelected()) {
+			clipboard.push_back(shapesList[i]);
+			shapesList.erase(shapesList.begin() + i);
+	
+		}
+	}
+    deselectAll();
+
+}
+void Graph::duplicateShapes() {
+
+	//
+	//for (auto shapePointer : shapesList) {
+	//	Point p;
+	//	p.x = shapePointer->getUpper().x+20;
+	//	p.y= shapePointer->getUpper().y+20;
+
+	//	shape* newShape = shapePointer->clone();
+	//	newShape->Move(p);
+
+	//	shapesList.push_back(newShape);
+
+	//}
+	
+	
+		shape* deplicate;
+		int num = shapesList.size();
+		for (int i = 0; i < num; i++)
+		{
+			if (dynamic_cast<Rect*>(shapesList[i]))
+			{
+				Rect* copy = dynamic_cast<Rect*>(shapesList[i]);
+				deplicate = new Rect(copy);
+				Addshape(deplicate);
+				cout << "rect";
+			}
+			if (dynamic_cast<Circle*>(shapesList[i]))
+			{
+				Circle* copy = dynamic_cast<Circle*>(shapesList[i]);
+				deplicate = new Circle(copy);
+				Addshape(deplicate);
+			}
+			
+			if (dynamic_cast<Line*>(shapesList[i]))
+			{
+				Line* copy = dynamic_cast<Line*>(shapesList[i]);
+				deplicate = new Line(copy);
+				Addshape(deplicate);
+			}
+			
+			if (dynamic_cast<Square*>(shapesList[i]))
+			{
+				Square* copy = dynamic_cast<Square*>(shapesList[i]);
+				deplicate = new Square(copy);
+				Addshape(deplicate);
+			}
+			if (dynamic_cast<Triangle*>(shapesList[i]))
+			{
+				Triangle* copy = dynamic_cast<Triangle*>(shapesList[i]);
+				deplicate = new Triangle(copy);
+				Addshape(deplicate);
+			}
+
+		}
+	}
+
 

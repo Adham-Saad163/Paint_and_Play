@@ -69,3 +69,15 @@ void IrrPoly::SImage(GUI* pUI)
 {
 	
 }
+
+shape* IrrPoly::clone()
+{
+	shape* newShape = new IrrPoly(*this);
+
+	return newShape;
+}
+
+Point IrrPoly::getUpper()
+{
+	return Arr[0];
+}

@@ -72,3 +72,15 @@ void Poly::SImage(GUI* pUI)
 {
 	
 }
+
+shape* Poly::clone()
+{
+	shape* newShape = new Poly(*this);
+
+	return newShape;
+}
+
+Point Poly::getUpper()
+{
+	return point1;
+}

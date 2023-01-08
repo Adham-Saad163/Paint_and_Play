@@ -41,3 +41,13 @@ void ColorPalette::SImage(GUI* pUI)
 {
 
 }
+
+shape* ColorPalette::clone()
+{
+	return nullptr;
+}
+
+Point ColorPalette::getUpper()
+{
+	return Point();
+}

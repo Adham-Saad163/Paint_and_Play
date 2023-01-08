@@ -209,6 +209,10 @@
     </ClCompile>
     <ClCompile Include="opUndo.cpp" />
     <ClCompile Include="opRedo.cpp" />
+    <ClCompile Include="opCopy.cpp" />
+    <ClCompile Include="opCut.cpp" />
+    <ClCompile Include="oppaste.cpp" />
+    <ClCompile Include="opDuplicate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -373,6 +377,13 @@
     <ClInclude Include="opScrample.h">
       <Filter>Operations</Filter>
     </ClInclude>
+    <ClInclude Include="ColorPalette.h" />
+    <ClInclude Include="opCopy.h" />
+    <ClInclude Include="opCut.h" />
+    <ClInclude Include="oppaste.h" />
+    <ClInclude Include="opRedo.h" />
+    <ClInclude Include="opUndo.h" />
+    <ClInclude Include="opDuplicate.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">

@@ -28,6 +28,12 @@ void Square::setSquareV(Point P1, Point P2)
 	}
 }
 
+Square::Square(const Square* copy) :shape(copy->ShpGfxInfo)
+{
+	this->Corner1 = copy->Corner1;
+	this->Corner2 = copy->Corner2;
+	this->ID = copy->ID;
+}
 Square::~Square()
 {}
 
@@ -134,4 +140,15 @@ void Square::Scrample()
 void Square::SImage(GUI* pUI)
 {
 	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
+}
+
+shape* Square::clone()
+{
+	shape* newShape = new Square(*this);
+    return newShape;
+}
+
+Point Square::getUpper()
+{
+	return Corner1;
 }

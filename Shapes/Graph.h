@@ -28,6 +28,7 @@ private:
 	shape* selectedShape;	//pointer to the currently selected shape
 	shape* copiedShape;
 	PickedColor pickedClr;
+	vector <shape*> clipboard;
 public:				
 
 	void SendFromShapesListToUndo();
@@ -53,4 +54,11 @@ public:
 	shape* GetSelected(); // return a pointer of the selected shape
 	void setCopied(shape*);
 	bool isSelected(bool B);
+	shape* getCopied();
+	void clearClipboard();
+	void CopyShape();
+	void CutShape();
+	void deselectAll();
+	void PasteShape(Point p);
+	void duplicateShapes();
 };

@@ -74,3 +74,32 @@ void Circle::SImage(GUI* pUI)
 {
 	pUI->StickImage(Image, Point1.x, Point1.y, 200, 200);
 }
+
+int* Circle::getshapeparamters()
+{
+	int list[10];
+
+	return list;
+
+}
+
+shape* Circle::clone()
+{
+	shape* newShape = new Circle(*this);
+
+	return newShape;
+}
+
+Point Circle::getUpper()
+{
+	return Point1;
+}
+
+Circle::Circle(const Circle* copy) :shape(copy->ShpGfxInfo)
+{
+	this->Point1 = copy->Point1;
+	this->Point2 = copy->Point2;
+	this->Radius = copy->Radius;
+	this->ID = copy->ID;
+
+}

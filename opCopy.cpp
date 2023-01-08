@@ -17,15 +17,10 @@ void opCopy::Execute()
 {
 	GUI* pGUI = pControl->GetUI();
 	Graph* pGraph = pControl->getGraph();
-	shape* copy = pGraph->GetSelected();
-	if (copy) {
-		pGraph->setCopied(copy);
-		pGUI->PrintMessage("shape is Copied");
-		
-	}
-	else {
-		pGUI->PrintMessage("Please Select A shape First");
-	}
+
+	
+	pGraph->CopyShape();
+	pGUI->PrintMessage("Selected shapes have been copied");
 
 	
 }

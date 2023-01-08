@@ -13,6 +13,7 @@ public:
 	void setSquareV(Point P1, Point P2);
 	virtual bool  insideShape(int x, int y);
 	Square(Point, Point, GfxInfo shapeGfxInfo);
+	Square(const Square* copy);
 	virtual ~Square();
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& outfile, int id);
@@ -21,5 +22,7 @@ public:
 	virtual void Move(Point P);
 	virtual void Scrample();
 	virtual void  SImage(GUI* pUI);
+	virtual shape* clone() ;
+	virtual Point getUpper();
 };
 

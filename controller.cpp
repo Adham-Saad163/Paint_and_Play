@@ -24,6 +24,10 @@
 
 #include "opUndo.h"
 #include "opRedo.h"
+#include "opCopy.h"
+#include"opCut.h"
+#include"oppaste.h"
+#include"opDuplicate.h"
 
 //Constructor
 controller::controller()

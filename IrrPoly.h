@@ -22,7 +22,8 @@ public:
 	virtual void Move(Point P);
 	virtual void Scrample();
 	virtual void  SImage(GUI* pUI);
-	
+	virtual shape* clone();
+	virtual Point getUpper();
 };
 
 

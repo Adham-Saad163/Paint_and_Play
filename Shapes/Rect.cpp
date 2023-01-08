@@ -5,6 +5,12 @@ Rect::Rect(Point P1, Point P2, GfxInfo shapeGfxInfo):shape(shapeGfxInfo)
 	Corner1 = P1;
 	Corner2 = P2;
 }
+Rect::Rect(const Rect* copy) :shape(copy->ShpGfxInfo)
+{
+	this->Corner1 = copy->Corner1;
+	this->Corner2 = copy->Corner2;
+	this->ID = copy->ID;
+}
 
 Rect::~Rect()
 {}
@@ -99,4 +105,16 @@ void Rect::Scrample()
 void Rect::SImage(GUI* pUI)
 {
 	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
+}
+
+shape* Rect::clone()
+{
+	shape* newShape = new Rect(*this);
+
+	return newShape;
+}
+
+Point Rect::getUpper()
+{
+	return Corner1;
 }

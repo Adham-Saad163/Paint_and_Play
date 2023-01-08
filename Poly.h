@@ -15,6 +15,7 @@ private:
 
 public:
 	Poly(Point, Point, int, GfxInfo shapeGfxInfo);
+	
 	virtual ~Poly();
 	virtual void Draw(GUI* pUI) const;
 	virtual bool  insideShape(int x, int y);
@@ -24,6 +25,8 @@ public:
 	virtual void Move(Point P);
 	virtual void Scrample();
 	virtual void  SImage(GUI* pUI);
+	virtual shape* clone();
+	virtual Point getUpper();
 };
 
 

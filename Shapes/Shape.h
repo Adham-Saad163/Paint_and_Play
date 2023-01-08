@@ -43,6 +43,8 @@ public:
 	virtual void Scrample() = 0;
 	virtual void Save(ofstream &OutFile, int id) = 0;	//Save the shape parameters to the file
 	//virtual void Load(ifstream &Infile) = 0;	//Load the shape parameters to the file
+	virtual shape* clone() = 0;
+	virtual Point getUpper() = 0;
 
 	//virtual void PrintInfo(Output* pOut) = 0;	//print all shape info on the status bar
 };
