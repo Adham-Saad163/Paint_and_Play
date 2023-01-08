@@ -122,6 +122,27 @@ void Line::zoom(double scale, int x, int y)
 	Corner2.y = (Corner2.y * scale) - (scale * y) + y;
 }
 
+
+shape* Line::clone()
+{
+	shape* newShape = new Line(*this);
+
+	return newShape;
+}
+
+Point Line::getUpper()
+{
+	return Corner1;
+}
+Line::Line(const Line* copy) :shape(copy->ShpGfxInfo)
+{
+	this->Corner1 = copy->Corner1;
+	this->Corner2 = copy->Corner2;
+	this->ID = copy->ID;
+	
+
+}
+
 void Line::hideShape(GUI* pUI)
 {
 }

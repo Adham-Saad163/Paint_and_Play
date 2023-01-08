@@ -5,6 +5,12 @@ Rect::Rect(Point P1, Point P2, GfxInfo shapeGfxInfo):shape(shapeGfxInfo)
 	Corner1 = P1;
 	Corner2 = P2;
 }
+Rect::Rect(const Rect* copy) :shape(copy->ShpGfxInfo)
+{
+	this->Corner1 = copy->Corner1;
+	this->Corner2 = copy->Corner2;
+	this->ID = copy->ID;
+}
 
 Rect::~Rect()
 {}
@@ -107,6 +113,19 @@ void Rect::zoom(double scale, int x, int y)
 	Corner1.y = (Corner1.y * scale) - (scale * y) + y;
 	Corner2.x = (Corner2.x * scale) - (scale * x) + x;
 	Corner2.y = (Corner2.y * scale) - (scale * y) + y;
+}
+
+
+shape* Rect::clone()
+{
+	shape* newShape = new Rect(*this);
+
+	return newShape;
+}
+
+Point Rect::getUpper()
+{
+	return Corner1;
 }
 
 void Rect::hideShape(GUI* pUI)

@@ -9,6 +9,7 @@ private:
 public:
 	virtual bool  insideShape(int x, int y);
 	Line(Point Corner1, Point Corner2, GfxInfo shapeGfxInfo);
+	Line(const Line* copy);
 	virtual ~Line();
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& outfile, int id);
@@ -20,7 +21,11 @@ public:
 	virtual void  SImage(GUI* pUI);
 
 	void zoom(double scale, int x, int y) override;
+
+	virtual shape* clone();
+	virtual Point getUpper();
 	void hideShape(GUI* pUI) override;
 };
+
 
 

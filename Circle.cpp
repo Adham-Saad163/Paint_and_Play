@@ -83,6 +83,37 @@ void Circle::zoom(double scale, int x, int y)
 	Point2.y = (Point2.y * scale) - (scale * y) + y;
 }
 
+
+int* Circle::getshapeparamters()
+{
+	int list[10];
+
+	return list;
+
+}
+
+shape* Circle::clone()
+{
+	shape* newShape = new Circle(*this);
+
+	return newShape;
+}
+
+Point Circle::getUpper()
+{
+	return Point1;
+}
+
+Circle::Circle(const Circle* copy) :shape(copy->ShpGfxInfo)
+{
+	this->Point1 = copy->Point1;
+	this->Point2 = copy->Point2;
+	this->Radius = copy->Radius;
+	this->ID = copy->ID;
+
+}
+}
+
 void Circle::hideShape(GUI* pUI)
 {
 	pUI->StickImage(Image, Point1.x, Point1.y, 200, 200);

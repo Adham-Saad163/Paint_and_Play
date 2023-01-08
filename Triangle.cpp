@@ -9,6 +9,16 @@ Triangle::Triangle(Point P1, Point P2, Point P3, GfxInfo shapeGfxInfo) :shape(sh
 	Corner3 = P3;
 
 }
+
+Triangle::Triangle(const Triangle* copy) :shape(copy->ShpGfxInfo)
+{
+	this->Corner1 = copy->Corner1;
+	this->Corner2 = copy->Corner2;
+	this->Corner3 = copy->Corner3;
+	this->ID = copy->ID;
+	
+}
+
 Triangle::~Triangle()
 {}
 
@@ -139,6 +149,18 @@ void Triangle::zoom(double scale, int x, int y)
 	Corner2.y = (Corner2.y * scale) - (scale * y) + y;
 	Corner3.x = (Corner3.x * scale) - (scale * x) + x;
 	Corner3.y = (Corner3.y * scale) - (scale * y) + y;
+}
+
+shape* Triangle::clone()
+{
+	shape* newShape = new Triangle(*this);
+
+	return newShape;
+}
+
+Point Triangle::getUpper()
+{
+	return Corner1;
 }
 
 void Triangle::hideShape(GUI* pUI)

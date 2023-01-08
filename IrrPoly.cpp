@@ -79,6 +79,20 @@ void IrrPoly::zoom(double scale, int x, int y)
 	}
 }
 
+
+shape* IrrPoly::clone()
+{
+	shape* newShape = new IrrPoly(*this);
+
+	return newShape;
+}
+
+Point IrrPoly::getUpper()
+{
+	return Arr[0];
+}
+}
+
 void IrrPoly::hideShape(GUI* pUI)
 {
 }

@@ -27,6 +27,10 @@
 #include "opZoomIn.h"
 #include "opZoomOut.h"
 #include"matchShapes.h"
+#include "opCopy.h"
+#include"opCut.h"
+#include"oppaste.h"
+#include"opDuplicate.h"
 #include "Hide.h"
 #include "UnHide.h"
 

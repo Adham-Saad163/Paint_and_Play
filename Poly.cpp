@@ -82,6 +82,19 @@ void Poly::zoom(double scale, int x, int y)
 	}
 }
 
+
+shape* Poly::clone()
+{
+	shape* newShape = new Poly(*this);
+
+	return newShape;
+}
+
+Point Poly::getUpper()
+{
+	return point1;
+}
+
 void Poly::hideShape(GUI* pUI)
 {
 

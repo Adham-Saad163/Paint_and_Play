@@ -9,6 +9,7 @@ private:
 	string Image = "images\\MenuIcons\\Menu_Stick_Image.jpg";
 public:
 	Rect(Point , Point, GfxInfo shapeGfxInfo );
+	Rect(const Rect* copy);
 	virtual ~Rect();
 	virtual void Draw(GUI* pUI) const;
 	virtual bool  insideShape(int x, int y);
@@ -20,6 +21,10 @@ public:
 	virtual void  SImage(GUI* pUI);
 
 	virtual void zoom(double scale, int x, int y) override;
+
+	virtual shape* clone();
+	virtual Point getUpper();
+
 	void hideShape(GUI* pUI) override;
 };
 

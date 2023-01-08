@@ -26,10 +26,12 @@ private:
 	vector <shape*> shapesList; //a container to hold all shapes							   
 	vector <SImage*> ImagesList;
 	shape* selectedShape;	//pointer to the currently selected shape
+	shape* copiedShape;
 	PickedColor pickedClr;
 	vector <shape*> matchedShapes;
 	vector <shape*> selectedShapes;
 
+	vector <shape*> clipboard;
 public:				
 
 	bool isSaved = false;		//boolean to check save & unsave shapes
@@ -53,6 +55,8 @@ public:
 	void RemoveShape(shape* pShp); // Removes the Last added Shape
 	color getColor();
 	void setColor(double&, double&, double&); // Sets the color to the chosen color from palette
+	shape* GetSelected(); // return a pointer of the selected shape
+	void setCopied(shape*);
 	bool isSelected(bool B);
 	void ZOOMING(double scale, int x, int y);
 
@@ -62,6 +66,14 @@ public:
 	vector <shape*> getMatchedShapes();
 	void clearMatchedShapes();
 	void DeleteShape(shape* pShpToDelete);
+
+	shape* getCopied();
+	void clearClipboard();
+	void CopyShape();
+	void CutShape();
+	void deselectAll();
+	void PasteShape(Point p);
+	void duplicateShapes();
 	void HideIt(GUI* pUI);
 	void UnhideIt(GUI* pUI);
 };

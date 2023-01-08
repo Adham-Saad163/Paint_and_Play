@@ -28,6 +28,12 @@ void Square::setSquareV(Point P1, Point P2)
 	}
 }
 
+Square::Square(const Square* copy) :shape(copy->ShpGfxInfo)
+{
+	this->Corner1 = copy->Corner1;
+	this->Corner2 = copy->Corner2;
+	this->ID = copy->ID;
+}
 Square::~Square()
 {}
 
@@ -142,6 +148,17 @@ void Square::zoom(double scale, int x, int y)
 	Corner1.y = (Corner1.y * scale) - (scale * y) + y;
 	Corner2.x = (Corner2.x * scale) - (scale * x) + x;
 	Corner2.y = (Corner2.y * scale) - (scale * y) + y;
+}
+
+shape* Square::clone()
+{
+	shape* newShape = new Square(*this);
+    return newShape;
+}
+
+Point Square::getUpper()
+{
+	return Corner1;
 }
 
 void Square::hideShape(GUI* pUI)

@@ -44,4 +44,15 @@ void ColorPalette::SImage(GUI* pUI)
 
 
 void ColorPalette::zoom(double scale, int x, int y) {}
+
+shape* ColorPalette::clone()
+{
+	return nullptr;
+}
+
+Point ColorPalette::getUpper()
+{
+	return Point();
+}
+void ColorPalette::zoom(double scale, int x, int y) {}
 void ColorPalette::hideShape(GUI* pUI){}
