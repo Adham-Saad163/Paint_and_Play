@@ -142,3 +142,7 @@ Line::Line(const Line* copy) :shape(copy->ShpGfxInfo)
 	
 
 }
+
+void Line::hideShape(GUI* pUI)
+{
+}

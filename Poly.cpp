@@ -94,3 +94,8 @@ Point Poly::getUpper()
 {
 	return point1;
 }
+
+void Poly::hideShape(GUI* pUI)
+{
+
+}

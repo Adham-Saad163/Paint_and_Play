@@ -22,4 +22,5 @@ public:
 	//virtual void Load(ifstream& Infile);
 
 	
+	void hideShape(GUI* pUI) override;
 };

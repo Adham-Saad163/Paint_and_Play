@@ -91,3 +91,8 @@ Point IrrPoly::getUpper()
 {
 	return Arr[0];
 }
+}
+
+void IrrPoly::hideShape(GUI* pUI)
+{
+}

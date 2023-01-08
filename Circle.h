@@ -26,6 +26,7 @@ public:
 	int* getshapeparamters();
 	virtual shape* clone();
 	virtual Point getUpper();
+	void hideShape(GUI* pUI) override;
 	//virtual void Load(ifstream& Infile);
 };
 

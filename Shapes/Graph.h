@@ -74,4 +74,6 @@ public:
 	void deselectAll();
 	void PasteShape(Point p);
 	void duplicateShapes();
+	void HideIt(GUI* pUI);
+	void UnhideIt(GUI* pUI);
 };

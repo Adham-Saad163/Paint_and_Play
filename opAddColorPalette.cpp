@@ -39,7 +39,6 @@ void opAddColorPalette::Execute()
 	Blue *= 255;
 
 	pGr->setColor(Red, Green, Blue);
-	pUI->setFillcolor(pGr->getColor());
 	pUI->PrintMessage("New color is picked!");
 	pGr->RemoveShape(R);
 }

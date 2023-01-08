@@ -162,3 +162,8 @@ Point Triangle::getUpper()
 {
 	return Corner1;
 }
+
+void Triangle::hideShape(GUI* pUI)
+{
+	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
+}

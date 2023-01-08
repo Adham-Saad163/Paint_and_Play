@@ -165,8 +165,8 @@ operationType GUI::GetUseroperation() const
 
 			case ICON_START: return  START;
 			//case ICON_RESTART: return  ;
-			//case ICON_HIDE: return   ;
-			//case ICON_UNHIDE: return   ;
+			case ICON_HIDE: return HIDE;
+			case ICON_UNHIDE: return UNHIDE;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}

@@ -112,3 +112,9 @@ Circle::Circle(const Circle* copy) :shape(copy->ShpGfxInfo)
 	this->ID = copy->ID;
 
 }
+}
+
+void Circle::hideShape(GUI* pUI)
+{
+	pUI->StickImage(Image, Point1.x, Point1.y, 200, 200);
+}

@@ -160,3 +160,8 @@ Point Square::getUpper()
 {
 	return Corner1;
 }
+
+void Square::hideShape(GUI* pUI)
+{
+	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
+}

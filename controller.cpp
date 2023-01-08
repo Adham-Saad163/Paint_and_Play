@@ -31,6 +31,8 @@
 #include"opCut.h"
 #include"oppaste.h"
 #include"opDuplicate.h"
+#include "Hide.h"
+#include "UnHide.h"
 
 //Constructor
 controller::controller()
@@ -193,6 +195,20 @@ operation* controller::createOperation(operationType OpType)
 		case EXIT:
 			pOp = new opExit(this);			
 			break;
+
+
+		case UNHIDE:
+			pOp = new UnHide(this);
+			break;
+
+		case HIDE:
+			pOp = new Hide(this);
+			break;
+		
+		//case PLAYING_AREA:
+		//	pOp = new matchShapes(this);
+		//	break;
+
 		
 	/*	case PLAYING_AREA:
 			pOp = new matchShapes(this);

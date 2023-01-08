@@ -127,3 +127,8 @@ Point Rect::getUpper()
 {
 	return Corner1;
 }
+
+void Rect::hideShape(GUI* pUI)
+{
+	pUI->StickImage(Image, Corner1.x, Corner1.y, 200, 200);
+}
