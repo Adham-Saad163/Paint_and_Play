@@ -174,6 +174,7 @@ operation* controller::createOperation(operationType OpType)
 		case MOVE:
 			pOp = new opMove(this);
 			addNewOp(pOp);
+			break;
 
 		case SCRAMBLE:
 			pOp = new opScrample(this);
