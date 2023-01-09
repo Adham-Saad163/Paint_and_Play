@@ -112,7 +112,7 @@ Circle::Circle(const Circle* copy) :shape(copy->ShpGfxInfo)
 	this->ID = copy->ID;
 
 }
-}
+
 
 void Circle::hideShape(GUI* pUI)
 {
